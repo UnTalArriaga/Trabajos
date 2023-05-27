@@ -1,0 +1,6 @@
+C:\Users\brend\source\repos\Ejercicio3\Practica8\bin\Debug\Practica8.exe
+C:\Users\brend\source\repos\Ejercicio3\Practica8\bin\Debug\Practica8.pdb
+C:\Users\brend\source\repos\Ejercicio3\Practica8\obj\Debug\Practica8.csprojAssemblyReference.cache
+C:\Users\brend\source\repos\Ejercicio3\Practica8\obj\Debug\Practica8.csproj.CoreCompileInputs.cache
+C:\Users\brend\source\repos\Ejercicio3\Practica8\obj\Debug\Practica8.exe
+C:\Users\brend\source\repos\Ejercicio3\Practica8\obj\Debug\Practica8.pdb

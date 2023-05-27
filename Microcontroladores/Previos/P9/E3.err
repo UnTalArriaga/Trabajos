@@ -1,0 +1,5 @@
+Compiling D:\Escuela\Semestre 23-2\LabMicros\Previos\P9\E3 on 19-may.-23 at 09:47
+>>> Warning 202 "C:\Program Files (x86)\PICC\Devices\i2c_LCD.c" Line 174(13,17): Variable never used:   data
+      Memory usage:   ROM=8%      RAM=4% - 10%
+      0 Errors,  1 Warnings.
+Build Successful.

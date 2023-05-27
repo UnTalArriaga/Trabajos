@@ -1,0 +1,60 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Thu Apr 13 16:54:30 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000002
+                   .org_2       code   0x000005    program   0x000088
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000000      
+                            0x000005    0x000048      
+            69 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    CARGA   0x00003a    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                    CICLO   0x00000b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                  ESPERA1   0x00000f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                  ESPERA2   0x000017    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                  ESPERA3   0x00001f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                   INICIO   0x000005    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                     RES1   0x000034    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                     RES2   0x000036    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                     RES3   0x000038    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+             RETARDO_20US   0x00003c    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                 VE3MAYOR   0x00002e    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                      dos   0x000040    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                     tres   0x00003e    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                      uno   0x000042    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000005    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                    CICLO   0x00000b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                  ESPERA1   0x00000f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                  ESPERA2   0x000017    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                  ESPERA3   0x00001f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                 VE3MAYOR   0x00002e    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                     RES1   0x000034    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                     RES2   0x000036    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                     RES3   0x000038    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                    CARGA   0x00003a    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+             RETARDO_20US   0x00003c    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                     tres   0x00003e    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                      dos   0x000040    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+                      uno   0x000042    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P6\EJ3.asm
+
+

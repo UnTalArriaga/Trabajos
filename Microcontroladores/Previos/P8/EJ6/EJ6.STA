@@ -1,0 +1,55 @@
+
+ROM used:   425/8192 (5%)
+            2049/8192 (25%) including unused fragments
+
+            0.6 Average locations per line
+            6.9 Average locations per statement
+
+RAM used:   8/368 (2%) at main() level
+            12/368 (3%) worst case
+
+Stack used: 3 worst case (2 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   91    62 100  EJ6.c
+  664     0   0  C:\Program Files (x86)\PICC\Devices\16f877.h
+----- -----
+  755    62 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     20   5    1             @delay_ms1
+3      1   0    0      5  1.0  loader16F877
+0     96  23    1    344  1.4  correrDerecha
+0     96  23    1    344  1.4  correrIzquierda
+0      5   1    0     21  1.0  correrMixto
+0    143  34    2    674  5.1  MAIN
+ Inline         0    354  4.7  @SCANF_WS
+0     60  14    4    238  4.0  @SCANF_C_32769
+ Inline         0    267  6.8  @cinit1
+
+Program metrics:
+    Functions               8
+    Statements              62
+    Comments                135
+    Volume (V)              3387
+    Difficulty (D)          24.8
+    Effort to implement (E) 84089
+    Time to implement (T)   1 hours, 18 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   13
+    Maintainability (MI)    110
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   420  1624  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01EFF     0  1792  
+01F00-01FFF     1  255  
+
+
+

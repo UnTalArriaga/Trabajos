@@ -1,0 +1,60 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Fri Apr 28 16:42:01 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000002
+                   .org_2       code   0x000005    program   0x0000be
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000000      
+                            0x000005    0x000063      
+            96 out of 8454 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 APAGADOS   0x000019    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                   CUARTA   0x000032    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+          GIROANTIHORARIO   0x00004b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+              GIROHORARIO   0x00003f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                   INICIO   0x000005    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                  PRIMERA   0x00001b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                PRINCIPAL   0x00000e    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                  SEGUNDA   0x000021    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                  TERCERA   0x00002c    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                    VACIO   0x00003d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                      dos   0x00005b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                  retardo   0x000057    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                     tres   0x000059    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                      uno   0x00005d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000005    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                PRINCIPAL   0x00000e    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                 APAGADOS   0x000019    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                  PRIMERA   0x00001b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                  SEGUNDA   0x000021    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                  TERCERA   0x00002c    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                   CUARTA   0x000032    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                    VACIO   0x00003d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+              GIROHORARIO   0x00003f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+          GIROANTIHORARIO   0x00004b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                  retardo   0x000057    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                     tres   0x000059    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                      dos   0x00005b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+                      uno   0x00005d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\JEJ2.asm
+
+

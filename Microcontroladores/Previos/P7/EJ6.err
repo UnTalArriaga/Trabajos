@@ -1,0 +1,17 @@
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 3 : Found label after column 1. (valor1)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 4 : Found label after column 1. (valor2)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 5 : Found label after column 1. (valor3)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 6 : Found label after column 1. (cte1)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 7 : Found label after column 1. (cte2)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 8 : Found label after column 1. (cte3)
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 16 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 17 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 19 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 20 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 57 : Found opcode in column 1. (GOTO)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 81 : Found label after column 1. (tres)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 84 : Found label after column 1. (dos)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 87 : Found label after column 1. (uno)
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 88 : Using default destination of 1 (file).
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 90 : Using default destination of 1 (file).
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ6.ASM 92 : Using default destination of 1 (file).

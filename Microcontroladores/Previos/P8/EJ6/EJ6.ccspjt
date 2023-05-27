@@ -1,0 +1,23 @@
+[PROJECT]
+Target=EJ6.hex
+Processor_Text=PIC16F877
+CCSVersion=5.093
+Compiler=PCM
+[Target Data]
+FileList=EJ6.c
+[EJ6.c]
+Type=4
+[mru-list]
+1=EJ6.c
+[Units]
+Count=1
+1=EJ6 (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=12-05-2023
+D1_L=1
+D1_L1=[44375]Project Closed.

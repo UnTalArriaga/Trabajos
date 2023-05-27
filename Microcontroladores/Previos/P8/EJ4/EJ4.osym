@@ -1,0 +1,38 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+CCP_2
+CCP_2_LOW
+CCP_2_HIGH
+PSP_DATA
+@sprintf_string
+
+Project Directory:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ4\
+
+Project Files:
+    EJ4.c                                                   [12-may.-23 12:03  CRC=4A32CA63]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [21-feb.-20 15:47  CRC=90274745]
+
+Source signature=6A8158ED
+
+Units:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ4\EJ4
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   EJ4.xsym
+    Errors:      ..\EJ1\EJ1.err
+    Ext Symbols: EJ4.esym
+    Object:      EJ4.o
+    Symbols:     EJ4.osym

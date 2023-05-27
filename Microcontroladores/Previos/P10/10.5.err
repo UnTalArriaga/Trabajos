@@ -1,0 +1,7 @@
+Compiling C:\Users\tobad\Desktop\p10\10.5 on 26-may.-23 at 16:43
+>>> Warning 216 "C:\Users\tobad\Desktop\p10\10.5.c" Line 104(1,2): Interrupts disabled during call to prevent re-entrancy:  (@I2C_WRITEU_129)
+>>> Warning 216 "C:\Users\tobad\Desktop\p10\10.5.c" Line 104(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 202 "C:\Program Files (x86)\PICC\Devices\i2c_LCD.c" Line 174(13,17): Variable never used:   data
+      Memory usage:   ROM=12%      RAM=9% - 15%
+      0 Errors,  3 Warnings.
+Build Successful.

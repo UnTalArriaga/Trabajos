@@ -1,0 +1,16 @@
+A1|Sabritas|10|5
+A2|Chicles|3.50|4
+A3|Ruffles|11|3
+A4|Tostitos|8.50|2
+B1|Sabritas|10|2
+B2|Chicles|3.50|3
+B3|Ruffles|11|4
+B4|Tostitos|8.50|5
+C1|Sabritas|10|5
+C2|Chicles|3.50|4
+C3|Ruffles|11|3
+C4|Tostitos|8.50|2
+D1|Sabritas|10|2
+D2|Chicles|3.50|3
+D3|Ruffles|11|4
+D4|Tostitos|8.50|5

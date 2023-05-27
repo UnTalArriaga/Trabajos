@@ -1,0 +1,12 @@
+Pluma Negra|Pluma de Color Negro|8|1|BIC001|SP02001|Tlalpan|Artículos de Escritorio
+Pluma Roja|Pluma de Color Rojo|8|1|BIC002|SP02002|Tlalpan|Artículos de Escritorio
+Pluma Azul|Pluma de Color Azul|8|1|BIC003|SP02003|Tlalpan|Artículos de Escritorio
+Lapíz|Lapíz #2|4|12|SP001|SP01004|Tlalpan|Artículos de Escritorio
+Cuaderno Raya|Cuaderno Rayado|23|6|NOR001|SP02005|Tlalpan|Cuadernos
+Cuaderno Cuadro Chico|Cuaderno Cuadro 0.5cm|30|10|NOR002|SP02006|Tlalpan|Cuadernos
+Cuaderno Cuadro Grande|Cuaderno Cuadro 1cm|30|1|NOR003|SP02007|Tlalpan|Cuadernos
+Tijeras|Tijeras Puntas Redondeada|13|4|BAR001|SP02008|Tlalpan|Corte
+Cuter|Cuter Sencillo|21|1|CUT001|SP01009|Tlalpan|Corte
+Hoja Bond|Hoja tamaño Bond Blanca|0.25|120|BON001|SP02010|Tlalpan|Papel
+Hoja Bond Color|Hoja tamaño Bond Colores diversos|1.50|33|BON002|SP02011|Tlalpan|Papel
+Cartulina Blanca|Cartulina Color Blanco|4|30|CAR001|SP02012|Tlalpan|Papel

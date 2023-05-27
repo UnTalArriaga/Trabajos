@@ -1,0 +1,38 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+CCP_2
+CCP_2_LOW
+CCP_2_HIGH
+PSP_DATA
+dato
+
+Project Directory:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ6\
+
+Project Files:
+    EJ6.c                                                   [12-may.-23 12:07  CRC=60C8849C]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [21-feb.-20 15:47  CRC=90274745]
+
+Source signature=81171326
+
+Units:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ6\EJ6
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   EJ6.xsym
+    Errors:      ..\EJ1\EJ1.err
+    Ext Symbols: EJ6.esym
+    Object:      EJ6.o
+    Symbols:     EJ6.osym

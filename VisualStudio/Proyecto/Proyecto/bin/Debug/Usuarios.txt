@@ -1,0 +1,11 @@
+0|4|Arriaga|3160178620|Jose Carlos|Arriaga Mejia|dir|correo|celular
+1|2|Joshua|Joshua1234|nombres|apellidos|Direcion nueva|Correo nuevo|celular
+1|2|Rodrigo|RodriMePa1|nombres|apellidos|dir|correo|celular
+1|1|Alexis|AleBurgos1|nombres|apellidos|dir|correo|celular
+1|1|BereWG|BereWG1506|Berenice|Garduño Cruz|Una direccion inventada xdxdxd|bere@hotmail.com|5512345678
+1|3|Adriana|Adriana2709|Adriana|Mejia Ramirez|DirInv|adri@hotmail.com|5513245768
+1|3|Danielito|Danielito1|Daniel|Garcia|OtraDirInv|daniel@gmail.com|31231231231
+2|0|Oscar|12334567890|Oscar|Ramirez|EnriqueSegobiano|jifbhbajknfja|51383123123
+2|0|Jose|12334567890|Jose|Mejia|EnriqueSegobiano|jifbhbajknfja|51383123123
+2|0|Lina|12334567890|Lina|Ramirez|EnriqueSegobiano|jifbhbajknfja|51383123123
+2|0|Alfredo|12334567890|Alfredo|Tinajero|EnriqueSegobiano|jifbhbajknfja|51383123123

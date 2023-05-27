@@ -1,0 +1,36 @@
+[PROJECT]
+Target=10.1.hex
+Processor_Text=PIC16F877
+CCSVersion=5.093
+Compiler=PCM
+[Target Data]
+FileList=10.1.c
+[10.1.c]
+Type=4
+[mru-list]
+1=10.1.c
+
+[ProjectLog]
+Days=1
+D1=26-05-2023
+D1_L=6
+D1_L1=[58989]Project Closed.
+D1_L2=[58989]Project Opened.
+D1_L3=[58993]Project Closed.
+D1_L4=[59083]Project Opened.
+D1_L5=[59093]Started Editing.
+D1_L6=[59122]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=10.1.c
+t1=1
+Count=1
+[Units]
+Count=1
+1=10.1 (main)
+
+[defines]
+buildcount=1

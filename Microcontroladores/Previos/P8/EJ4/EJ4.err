@@ -1,0 +1,5 @@
+Compiling D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ4\EJ4 on 12-may.-23 at 12:18
+>>> Warning 203 "D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ4\EJ4.c" Line 11(1,1): Condition always TRUE
+      Memory usage:   ROM=2%      RAM=2% - 3%
+      0 Errors,  1 Warnings.
+Build Successful.

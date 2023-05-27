@@ -1,0 +1,9 @@
+C:\Users\Jair\source\repos\Clase9Nov\EjemploBibliotecas\bin\Debug\EjemploBibliotecas.exe
+C:\Users\Jair\source\repos\Clase9Nov\EjemploBibliotecas\bin\Debug\EjemploBibliotecas.pdb
+C:\Users\Jair\source\repos\Clase9Nov\EjemploBibliotecas\bin\Debug\MisBibliotecas.dll
+C:\Users\Jair\source\repos\Clase9Nov\EjemploBibliotecas\bin\Debug\MisBibliotecas.pdb
+C:\Users\Jair\source\repos\Clase9Nov\EjemploBibliotecas\obj\Debug\EjemploBibliotecas.csprojAssemblyReference.cache
+C:\Users\Jair\source\repos\Clase9Nov\EjemploBibliotecas\obj\Debug\EjemploBibliotecas.csproj.CoreCompileInputs.cache
+C:\Users\Jair\source\repos\Clase9Nov\EjemploBibliotecas\obj\Debug\EjemploBibliotecas.csproj.CopyComplete
+C:\Users\Jair\source\repos\Clase9Nov\EjemploBibliotecas\obj\Debug\EjemploBibliotecas.exe
+C:\Users\Jair\source\repos\Clase9Nov\EjemploBibliotecas\obj\Debug\EjemploBibliotecas.pdb

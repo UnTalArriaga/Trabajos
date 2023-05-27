@@ -1,0 +1,7 @@
+C:\Users\ISABEL\Desktop\ProgramasPOO\p4 Ejercicio 2\cajeroatm\bin\Debug\cajeroatm.exe.config
+C:\Users\ISABEL\Desktop\ProgramasPOO\p4 Ejercicio 2\cajeroatm\bin\Debug\cajeroatm.exe
+C:\Users\ISABEL\Desktop\ProgramasPOO\p4 Ejercicio 2\cajeroatm\bin\Debug\cajeroatm.pdb
+C:\Users\ISABEL\Desktop\ProgramasPOO\p4 Ejercicio 2\cajeroatm\obj\Debug\cajeroatm.csprojAssemblyReference.cache
+C:\Users\ISABEL\Desktop\ProgramasPOO\p4 Ejercicio 2\cajeroatm\obj\Debug\cajeroatm.csproj.CoreCompileInputs.cache
+C:\Users\ISABEL\Desktop\ProgramasPOO\p4 Ejercicio 2\cajeroatm\obj\Debug\cajeroatm.exe
+C:\Users\ISABEL\Desktop\ProgramasPOO\p4 Ejercicio 2\cajeroatm\obj\Debug\cajeroatm.pdb

@@ -1,0 +1,545 @@
+CCS PCM C Compiler, Version 5.093, 4770               12-may.-23 12:19
+
+               Filename:   D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ6\EJ6.lst
+
+               ROM used:   425 words (5%)
+                           Largest free fragment is 2048
+               RAM used:   8 (2%) at main() level
+                           12 (3%) worst case
+               Stack used: 3 locations (2 in main + 1 for interrupts)
+               Stack size: 8
+
+0000:  MOVLW  01
+0001:  MOVWF  0A
+0002:  GOTO   119
+0003:  NOP
+.................... #include <16f877.h> //biblioteca del micro
+.................... //////////// Standard Header file for the PIC16F877 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F877
+0004:  CLRF   26
+0005:  BTFSS  0C.5
+0006:  GOTO   005
+0007:  MOVF   1A,W
+0008:  MOVWF  78
+0009:  MOVF   78,W
+000A:  MOVWF  7A
+000B:  MOVF   7A,F
+000C:  BTFSC  03.2
+000D:  GOTO   03B
+000E:  INCF   26,F
+000F:  BTFSS  25.5
+0010:  GOTO   017
+0011:  BTFSC  25.0
+0012:  GOTO   017
+0013:  MOVF   7A,W
+0014:  SUBLW  20
+0015:  BTFSC  03.0
+0016:  GOTO   027
+0017:  BSF    25.0
+0018:  BTFSC  25.6
+0019:  GOTO   021
+001A:  MOVF   23,W
+001B:  MOVWF  04
+001C:  BCF    03.7
+001D:  BTFSC  24.0
+001E:  BSF    03.7
+001F:  MOVF   7A,W
+0020:  MOVWF  00
+0021:  BTFSS  25.7
+0022:  GOTO   03B
+0023:  INCF   23,F
+0024:  DECFSZ 24,F
+0025:  GOTO   005
+0026:  GOTO   03B
+0027:  MOVF   7A,W
+0028:  SUBLW  20
+0029:  BTFSC  03.2
+002A:  GOTO   035
+002B:  MOVF   7A,W
+002C:  SUBLW  08
+002D:  BTFSC  03.0
+002E:  GOTO   033
+002F:  MOVF   7A,W
+0030:  SUBLW  0D
+0031:  BTFSC  03.0
+0032:  GOTO   035
+0033:  CLRF   78
+0034:  GOTO   037
+0035:  MOVLW  01
+0036:  MOVWF  78
+0037:  MOVF   78,F
+0038:  BTFSS  03.2
+0039:  GOTO   005
+003A:  GOTO   017
+003B:  MOVF   26,W
+003C:  MOVWF  78
+003D:  BCF    0A.3
+003E:  BCF    0A.4
+003F:  GOTO   132 (RETURN)
+.................... 
+.................... #list
+.................... 
+.................... #fuses HS,NOPROTECT, //parámetros físicos - eléctricos del controlador
+.................... #use delay(clock=20000000) // 20 MHz establece el reloj a utilizar
+0040:  MOVLW  22
+0041:  MOVWF  04
+0042:  BCF    03.7
+0043:  MOVF   00,W
+0044:  BTFSC  03.2
+0045:  GOTO   053
+0046:  MOVLW  06
+0047:  MOVWF  78
+0048:  CLRF   77
+0049:  DECFSZ 77,F
+004A:  GOTO   049
+004B:  DECFSZ 78,F
+004C:  GOTO   048
+004D:  MOVLW  7B
+004E:  MOVWF  77
+004F:  DECFSZ 77,F
+0050:  GOTO   04F
+0051:  DECFSZ 00,F
+0052:  GOTO   046
+0053:  RETURN
+.................... // utiliza estándar rs232 con la configuración:
+.................... // transmite por portC.6 y recibe por portC.7 con 9600 bauds
+.................... #use rs232(baud=9600, xmit=PIN_C6, rcv=PIN_C7)
+.................... // reserva la memoria donde esta el bootloader
+.................... #org 0x1F00, 0x1FFF void loader16F877(void) {}
+*
+1F00:  RETURN
+.................... char dato; // variable globar tipo caracter 8 bits
+.................... 
+.................... void correrDerecha(){ // corrimiento derecha
+....................    output_b(0x80);
+*
+0054:  BSF    03.5
+0055:  CLRF   06
+0056:  MOVLW  80
+0057:  BCF    03.5
+0058:  MOVWF  06
+....................    delay_ms(500);
+0059:  MOVLW  02
+005A:  MOVWF  21
+005B:  MOVLW  FA
+005C:  MOVWF  22
+005D:  CALL   040
+005E:  DECFSZ 21,F
+005F:  GOTO   05B
+....................    output_b(0x40);
+0060:  BSF    03.5
+0061:  CLRF   06
+0062:  MOVLW  40
+0063:  BCF    03.5
+0064:  MOVWF  06
+....................    delay_ms(500);
+0065:  MOVLW  02
+0066:  MOVWF  21
+0067:  MOVLW  FA
+0068:  MOVWF  22
+0069:  CALL   040
+006A:  DECFSZ 21,F
+006B:  GOTO   067
+....................    output_b(0x20);
+006C:  BSF    03.5
+006D:  CLRF   06
+006E:  MOVLW  20
+006F:  BCF    03.5
+0070:  MOVWF  06
+....................    delay_ms(500);
+0071:  MOVLW  02
+0072:  MOVWF  21
+0073:  MOVLW  FA
+0074:  MOVWF  22
+0075:  CALL   040
+0076:  DECFSZ 21,F
+0077:  GOTO   073
+....................    output_b(0x10);
+0078:  BSF    03.5
+0079:  CLRF   06
+007A:  MOVLW  10
+007B:  BCF    03.5
+007C:  MOVWF  06
+....................    delay_ms(500);
+007D:  MOVLW  02
+007E:  MOVWF  21
+007F:  MOVLW  FA
+0080:  MOVWF  22
+0081:  CALL   040
+0082:  DECFSZ 21,F
+0083:  GOTO   07F
+....................    output_b(0x08);
+0084:  BSF    03.5
+0085:  CLRF   06
+0086:  MOVLW  08
+0087:  BCF    03.5
+0088:  MOVWF  06
+....................    delay_ms(500);
+0089:  MOVLW  02
+008A:  MOVWF  21
+008B:  MOVLW  FA
+008C:  MOVWF  22
+008D:  CALL   040
+008E:  DECFSZ 21,F
+008F:  GOTO   08B
+....................    output_b(0x04);
+0090:  BSF    03.5
+0091:  CLRF   06
+0092:  MOVLW  04
+0093:  BCF    03.5
+0094:  MOVWF  06
+....................    delay_ms(500);
+0095:  MOVLW  02
+0096:  MOVWF  21
+0097:  MOVLW  FA
+0098:  MOVWF  22
+0099:  CALL   040
+009A:  DECFSZ 21,F
+009B:  GOTO   097
+....................    output_b(0x02);
+009C:  BSF    03.5
+009D:  CLRF   06
+009E:  MOVLW  02
+009F:  BCF    03.5
+00A0:  MOVWF  06
+....................    delay_ms(500);
+00A1:  MOVWF  21
+00A2:  MOVLW  FA
+00A3:  MOVWF  22
+00A4:  CALL   040
+00A5:  DECFSZ 21,F
+00A6:  GOTO   0A2
+....................    output_b(0x01);
+00A7:  BSF    03.5
+00A8:  CLRF   06
+00A9:  MOVLW  01
+00AA:  BCF    03.5
+00AB:  MOVWF  06
+....................    delay_ms(500);
+00AC:  MOVLW  02
+00AD:  MOVWF  21
+00AE:  MOVLW  FA
+00AF:  MOVWF  22
+00B0:  CALL   040
+00B1:  DECFSZ 21,F
+00B2:  GOTO   0AE
+00B3:  RETURN
+.................... }
+.................... void correrIzquierda(){ // corrimiento izquierda
+....................    output_b(0x01);
+00B4:  BSF    03.5
+00B5:  CLRF   06
+00B6:  MOVLW  01
+00B7:  BCF    03.5
+00B8:  MOVWF  06
+....................    delay_ms(500);
+00B9:  MOVLW  02
+00BA:  MOVWF  21
+00BB:  MOVLW  FA
+00BC:  MOVWF  22
+00BD:  CALL   040
+00BE:  DECFSZ 21,F
+00BF:  GOTO   0BB
+....................    output_b(0x02);
+00C0:  BSF    03.5
+00C1:  CLRF   06
+00C2:  MOVLW  02
+00C3:  BCF    03.5
+00C4:  MOVWF  06
+....................    delay_ms(500);
+00C5:  MOVWF  21
+00C6:  MOVLW  FA
+00C7:  MOVWF  22
+00C8:  CALL   040
+00C9:  DECFSZ 21,F
+00CA:  GOTO   0C6
+....................    output_b(0x04);
+00CB:  BSF    03.5
+00CC:  CLRF   06
+00CD:  MOVLW  04
+00CE:  BCF    03.5
+00CF:  MOVWF  06
+....................    delay_ms(500);
+00D0:  MOVLW  02
+00D1:  MOVWF  21
+00D2:  MOVLW  FA
+00D3:  MOVWF  22
+00D4:  CALL   040
+00D5:  DECFSZ 21,F
+00D6:  GOTO   0D2
+....................    output_b(0x08);
+00D7:  BSF    03.5
+00D8:  CLRF   06
+00D9:  MOVLW  08
+00DA:  BCF    03.5
+00DB:  MOVWF  06
+....................    delay_ms(500);
+00DC:  MOVLW  02
+00DD:  MOVWF  21
+00DE:  MOVLW  FA
+00DF:  MOVWF  22
+00E0:  CALL   040
+00E1:  DECFSZ 21,F
+00E2:  GOTO   0DE
+....................    output_b(0x10);
+00E3:  BSF    03.5
+00E4:  CLRF   06
+00E5:  MOVLW  10
+00E6:  BCF    03.5
+00E7:  MOVWF  06
+....................    delay_ms(500);
+00E8:  MOVLW  02
+00E9:  MOVWF  21
+00EA:  MOVLW  FA
+00EB:  MOVWF  22
+00EC:  CALL   040
+00ED:  DECFSZ 21,F
+00EE:  GOTO   0EA
+....................    output_b(0x20);
+00EF:  BSF    03.5
+00F0:  CLRF   06
+00F1:  MOVLW  20
+00F2:  BCF    03.5
+00F3:  MOVWF  06
+....................    delay_ms(500);
+00F4:  MOVLW  02
+00F5:  MOVWF  21
+00F6:  MOVLW  FA
+00F7:  MOVWF  22
+00F8:  CALL   040
+00F9:  DECFSZ 21,F
+00FA:  GOTO   0F6
+....................    output_b(0x40);
+00FB:  BSF    03.5
+00FC:  CLRF   06
+00FD:  MOVLW  40
+00FE:  BCF    03.5
+00FF:  MOVWF  06
+....................    delay_ms(500);
+0100:  MOVLW  02
+0101:  MOVWF  21
+0102:  MOVLW  FA
+0103:  MOVWF  22
+0104:  CALL   040
+0105:  DECFSZ 21,F
+0106:  GOTO   102
+....................    output_b(0x80);
+0107:  BSF    03.5
+0108:  CLRF   06
+0109:  MOVLW  80
+010A:  BCF    03.5
+010B:  MOVWF  06
+....................    delay_ms(500);
+010C:  MOVLW  02
+010D:  MOVWF  21
+010E:  MOVLW  FA
+010F:  MOVWF  22
+0110:  CALL   040
+0111:  DECFSZ 21,F
+0112:  GOTO   10E
+0113:  RETURN
+.................... }
+.................... void correrMixto(){ // corrimiento mixto
+....................    correrDerecha(); // llama corrimiento derecha
+0114:  CALL   054
+....................    correrIzquierda(); // llama corrimiento izquierda
+0115:  CALL   0B4
+0116:  BCF    0A.3
+0117:  BCF    0A.4
+0118:  GOTO   182 (RETURN)
+.................... }
+.................... // el programa realiza diversas acciones dependiendo de la entrada
+.................... void main(){
+0119:  MOVF   03,W
+011A:  ANDLW  1F
+011B:  MOVWF  03
+011C:  MOVLW  81
+011D:  BSF    03.5
+011E:  MOVWF  19
+011F:  MOVLW  A6
+0120:  MOVWF  18
+0121:  MOVLW  90
+0122:  BCF    03.5
+0123:  MOVWF  18
+0124:  BSF    03.5
+0125:  BSF    1F.0
+0126:  BSF    1F.1
+0127:  BSF    1F.2
+0128:  BCF    1F.3
+0129:  BCF    03.7
+....................    while(1){
+....................    scanf("%c", &dato); // recibe y almacena dato de entrada
+012A:  BCF    03.5
+012B:  CLRF   21
+012C:  CLRF   22
+012D:  MOVLW  20
+012E:  MOVWF  23
+012F:  CLRF   25
+0130:  CLRF   24
+0131:  GOTO   004
+0132:  MOVF   78,F
+0133:  BTFSS  03.2
+0134:  GOTO   137
+0135:  CLRF   22
+0136:  GOTO   13A
+0137:  MOVF   78,W
+0138:  ADDWF  21,F
+0139:  INCF   22,F
+....................    switch(dato) { // evalua el caso y realiza la acción
+013A:  MOVF   20,W
+013B:  XORLW  30
+013C:  BTFSC  03.2
+013D:  GOTO   14E
+013E:  XORLW  01
+013F:  BTFSC  03.2
+0140:  GOTO   15A
+0141:  XORLW  03
+0142:  BTFSC  03.2
+0143:  GOTO   167
+0144:  XORLW  01
+0145:  BTFSC  03.2
+0146:  GOTO   174
+0147:  XORLW  07
+0148:  BTFSC  03.2
+0149:  GOTO   181
+014A:  XORLW  01
+014B:  BTFSC  03.2
+014C:  GOTO   18E
+014D:  GOTO   1A6
+....................       case '0':
+....................       output_b(0x00); // todos los bits apagados
+014E:  BSF    03.5
+014F:  CLRF   06
+0150:  BCF    03.5
+0151:  CLRF   06
+....................       delay_ms(500);
+0152:  MOVLW  02
+0153:  MOVWF  21
+0154:  MOVLW  FA
+0155:  MOVWF  22
+0156:  CALL   040
+0157:  DECFSZ 21,F
+0158:  GOTO   154
+....................       break;
+0159:  GOTO   1A6
+....................       case '1':
+....................       output_b(0xff); // todos los bits encendidos
+015A:  BSF    03.5
+015B:  CLRF   06
+015C:  MOVLW  FF
+015D:  BCF    03.5
+015E:  MOVWF  06
+....................       delay_ms(500);
+015F:  MOVLW  02
+0160:  MOVWF  21
+0161:  MOVLW  FA
+0162:  MOVWF  22
+0163:  CALL   040
+0164:  DECFSZ 21,F
+0165:  GOTO   161
+....................       break;
+0166:  GOTO   1A6
+....................       case '2':
+....................       correrDerecha(); // Corrimeinto derecha
+0167:  CALL   054
+....................       output_b(0x00);
+0168:  BSF    03.5
+0169:  CLRF   06
+016A:  BCF    03.5
+016B:  CLRF   06
+....................       delay_ms(500);
+016C:  MOVLW  02
+016D:  MOVWF  21
+016E:  MOVLW  FA
+016F:  MOVWF  22
+0170:  CALL   040
+0171:  DECFSZ 21,F
+0172:  GOTO   16E
+....................       break;
+0173:  GOTO   1A6
+....................       case '3':
+....................       correrIzquierda(); // Corrimiento izquierda
+0174:  CALL   0B4
+....................       output_b(0x00);
+0175:  BSF    03.5
+0176:  CLRF   06
+0177:  BCF    03.5
+0178:  CLRF   06
+....................       delay_ms(500);
+0179:  MOVLW  02
+017A:  MOVWF  21
+017B:  MOVLW  FA
+017C:  MOVWF  22
+017D:  CALL   040
+017E:  DECFSZ 21,F
+017F:  GOTO   17B
+....................       break;
+0180:  GOTO   1A6
+....................       case '4':
+....................       correrMixto(); // ida y vuelta
+0181:  GOTO   114
+....................       output_b(0x00);
+0182:  BSF    03.5
+0183:  CLRF   06
+0184:  BCF    03.5
+0185:  CLRF   06
+....................       delay_ms(500);
+0186:  MOVLW  02
+0187:  MOVWF  21
+0188:  MOVLW  FA
+0189:  MOVWF  22
+018A:  CALL   040
+018B:  DECFSZ 21,F
+018C:  GOTO   188
+....................       break;
+018D:  GOTO   1A6
+....................       case '5':
+....................       output_b(0xff); // apagar y encender
+018E:  BSF    03.5
+018F:  CLRF   06
+0190:  MOVLW  FF
+0191:  BCF    03.5
+0192:  MOVWF  06
+....................       delay_ms(500);
+0193:  MOVLW  02
+0194:  MOVWF  21
+0195:  MOVLW  FA
+0196:  MOVWF  22
+0197:  CALL   040
+0198:  DECFSZ 21,F
+0199:  GOTO   195
+....................       output_b(0x00);
+019A:  BSF    03.5
+019B:  CLRF   06
+019C:  BCF    03.5
+019D:  CLRF   06
+....................       delay_ms(500);
+019E:  MOVLW  02
+019F:  MOVWF  21
+01A0:  MOVLW  FA
+01A1:  MOVWF  22
+01A2:  CALL   040
+01A3:  DECFSZ 21,F
+01A4:  GOTO   1A0
+....................       break;
+01A5:  GOTO   1A6
+....................       default:
+....................       break;
+....................    }// switch
+01A6:  GOTO   12B
+....................    }//while
+.................... }//main
+.................... 
+01A7:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

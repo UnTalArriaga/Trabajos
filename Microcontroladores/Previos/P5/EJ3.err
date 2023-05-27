@@ -1,0 +1,15 @@
+Message[301] C:\PROGRAM FILES (X86)\MICROCHIP\MPASM SUITE\P16F877A.INC 33 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 2 : Found label after column 1. (VALOR1)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 3 : Found label after column 1. (VALOR2)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 4 : Found label after column 1. (VALOR3)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 5 : Found label after column 1. (CTE2)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 6 : Found label after column 1. (CTE3)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 7 : Found label after column 1. (TIEMPO)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 8 : Found label after column 1. (T_ON)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 9 : Found label after column 1. (T_OFF)
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 18 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 20 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 22 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 73 : Using default destination of 1 (file).
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 75 : Using default destination of 1 (file).
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P5\EJ3.ASM 77 : Using default destination of 1 (file).

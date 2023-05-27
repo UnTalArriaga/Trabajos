@@ -1,0 +1,8 @@
+ÀÄE1
+   ÀÄMAIN  0/42  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄescribir_i2c  0/19  Ram=0
+      ³  ÃÄ@I2C_WRITEU_129  0/16  Ram=1
+      ³  ÀÄ@I2C_WRITEU_129  0/16  Ram=1
+      ÀÄ@delay_ms1  0/22  Ram=1

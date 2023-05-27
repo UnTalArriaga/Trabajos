@@ -1,0 +1,6 @@
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio3\bin\Debug\Practica4.exe
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio3\bin\Debug\Practica4.pdb
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio3\obj\Debug\Ejercicio3.csprojAssemblyReference.cache
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio3\obj\Debug\Ejercicio3.csproj.CoreCompileInputs.cache
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio3\obj\Debug\Practica4.exe
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio3\obj\Debug\Practica4.pdb

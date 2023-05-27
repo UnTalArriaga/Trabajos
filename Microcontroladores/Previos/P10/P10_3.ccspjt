@@ -1,0 +1,33 @@
+[PROJECT]
+Target=P10_3.hex
+Processor_Text=PIC16F877
+CCSVersion=5.093
+Compiler=PCM
+[Target Data]
+FileList=P10_3.c
+[P10_3.c]
+Type=4
+[mru-list]
+1=P10_3.c
+[Units]
+Count=1
+1=P10_3 (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=26-05-2023
+D1_L=2
+D1_L1=[58968]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L2=[58968]Project Closed.
+
+[Opened Files]
+1=P10_3.c
+t1=6
+Count=1

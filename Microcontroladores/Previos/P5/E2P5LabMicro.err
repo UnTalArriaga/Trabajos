@@ -1,0 +1,13 @@
+Warning[205] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 1 : Found directive in column 1. (processor)
+Warning[215] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 1 : Processor superseded by command line.  Verify processor symbol.
+Warning[205] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 2 : Found directive in column 1. (include)
+Message[302] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 25 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 29 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 31 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 100 : Using default destination of 1 (file).
+Message[305] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 103 : Using default destination of 1 (file).
+Message[305] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 140 : Using default destination of 1 (file).
+Message[305] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 143 : Using default destination of 1 (file).
+Message[305] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 178 : Using default destination of 1 (file).
+Message[305] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 180 : Using default destination of 1 (file).
+Message[305] C:\USERS\TOBAD\DESKTOP\E2P5LABMICRO.ASM 182 : Using default destination of 1 (file).

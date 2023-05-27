@@ -1,0 +1,66 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Fri Apr 28 16:01:49 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000002
+                   .org_2       code   0x000005    program   0x00009e
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000000      
+                            0x000005    0x000053      
+            80 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     CERO   0x00001d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                    CICLO   0x000012    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                   CUATRO   0x00003b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+              CUATRO_ITER   0x00003d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+            CUATRO_VUELTA   0x000040    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                      DOS   0x000027    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                  DOS_REP   0x00002a    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                   INICIO   0x000005    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                  RETARDO   0x000047    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                     TRES   0x00002f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                TRES_ITER   0x000031    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+              TRES_VUELTA   0x000034    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                      UNO   0x00001f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                  UNO_REP   0x000022    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                      dos   0x00004b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                     tres   0x000049    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                      uno   0x00004d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000005    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                    CICLO   0x000012    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                     CERO   0x00001d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                      UNO   0x00001f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                  UNO_REP   0x000022    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                      DOS   0x000027    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                  DOS_REP   0x00002a    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                     TRES   0x00002f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                TRES_ITER   0x000031    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+              TRES_VUELTA   0x000034    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                   CUATRO   0x00003b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+              CUATRO_ITER   0x00003d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+            CUATRO_VUELTA   0x000040    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                  RETARDO   0x000047    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                     tres   0x000049    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                      dos   0x00004b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+                      uno   0x00004d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P5\J2.asm
+
+

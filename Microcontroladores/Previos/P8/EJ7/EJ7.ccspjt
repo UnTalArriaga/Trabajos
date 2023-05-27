@@ -1,0 +1,30 @@
+[PROJECT]
+Target=EJ7.hex
+Processor_Text=PIC16F877
+CCSVersion=5.093
+Compiler=PCM
+[Target Data]
+FileList=EJ7.c
+[EJ7.c]
+Type=4
+[mru-list]
+1=EJ7.c
+[Units]
+Count=1
+1=EJ7 (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=2
+D1=12-05-2023
+D1_L=1
+D1_L1=[44396]Project Closed.
+D2=18-05-2023
+D2_L=2
+D2_L1=[69020]Project Opened.
+D2_L2=[69071]Project Closed.
+
+[fileformats]
+forcecoff=0

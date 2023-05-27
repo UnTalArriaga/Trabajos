@@ -1,0 +1,3 @@
+Luke|SkyWalker|15000|Resistencia
+Han|Solo|500|Reisistencia
+Darth Vader||30000|Imperio

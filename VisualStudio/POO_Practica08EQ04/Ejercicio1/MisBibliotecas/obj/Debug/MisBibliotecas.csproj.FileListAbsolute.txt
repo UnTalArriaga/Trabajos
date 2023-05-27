@@ -1,0 +1,6 @@
+C:\Users\ISABEL\Desktop\ProgramasPOO\MisBibliotecas\bin\Debug\MisBibliotecas.dll
+C:\Users\ISABEL\Desktop\ProgramasPOO\MisBibliotecas\bin\Debug\MisBibliotecas.pdb
+C:\Users\ISABEL\Desktop\ProgramasPOO\MisBibliotecas\obj\Debug\MisBibliotecas.csprojAssemblyReference.cache
+C:\Users\ISABEL\Desktop\ProgramasPOO\MisBibliotecas\obj\Debug\MisBibliotecas.csproj.CoreCompileInputs.cache
+C:\Users\ISABEL\Desktop\ProgramasPOO\MisBibliotecas\obj\Debug\MisBibliotecas.dll
+C:\Users\ISABEL\Desktop\ProgramasPOO\MisBibliotecas\obj\Debug\MisBibliotecas.pdb

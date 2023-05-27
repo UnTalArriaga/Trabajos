@@ -1,0 +1,12 @@
+Pluma Negra|Pluma de Color Negro|8|15|BIC001|SP01001|Insurgentes|Artículos de Escritorio
+Pluma Roja|Pluma de Color Rojo|8|10|BIC002|SP01002|Insurgentes|Artículos de Escritorio
+Pluma Azul|Pluma de Color Azul|8|9|BIC003|SP01003|Insurgentes|Artículos de Escritorio
+Lapíz|Lapíz #2|4|24|SP001|SP01004|Insurgentes|Artículos de Escritorio
+Cuaderno Raya|Cuaderno Rayado|23|15|NOR001|SP01005|Insurgentes|Cuadernos
+Cuaderno Cuadro Chico|Cuaderno Cuadro 0.5cm|30|2|NOR002|SP01006|Insurgentes|Cuadernos
+Cuaderno Cuadro Grande|Cuaderno Cuadro 1cm|30|6|NOR003|SP01007|Insurgentes|Cuadernos
+Tijeras|Tijeras Puntas Redondeada|13|9|BAR001|SP01008|Insurgentes|Corte
+Cuter|Cuter Sencillo|21|5|CUT001|SP01009|Insurgentes|Corte
+Hoja Bond|Hoja tamaño Bond Blanca|0.25|300|BON001|SP01010|Insurgentes|Papel
+Hoja Bond Color|Hoja tamaño Bond Colores diversos|1.50|80|BON002|SP01011|Insurgentes|Papel
+Cartulina Blanca|Cartulina Color Blanco|4|20|CAR001|SP01012|Insurgentes|Papel

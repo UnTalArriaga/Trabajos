@@ -1,0 +1,14 @@
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio2\bin\Debug\cajeroatm.exe.config
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio2\bin\Debug\cajeroatm.exe
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio2\bin\Debug\cajeroatm.pdb
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio2\obj\Debug\Ejercicio2.csprojAssemblyReference.cache
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio2\obj\Debug\Ejercicio2.csproj.CoreCompileInputs.cache
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio2\obj\Debug\cajeroatm.exe
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio2\obj\Debug\cajeroatm.pdb
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio2\bin\Debug\cajeroatm.exe.config
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio2\bin\Debug\cajeroatm.exe
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio2\bin\Debug\cajeroatm.pdb
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio2\obj\Debug\Ejercicio2.csprojAssemblyReference.cache
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio2\obj\Debug\Ejercicio2.csproj.CoreCompileInputs.cache
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio2\obj\Debug\cajeroatm.exe
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio2\obj\Debug\cajeroatm.pdb

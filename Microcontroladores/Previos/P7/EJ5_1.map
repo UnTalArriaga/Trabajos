@@ -1,0 +1,52 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Fri May 05 16:44:46 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000002
+                   .org_2       code   0x000005    program   0x000082
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000000      
+                            0x000005    0x000045      
+            66 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  CORRDER   0x00002b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                  CORRIZQ   0x000034    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                  DERECHA   0x000027    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                   INICIO   0x000005    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                IZQUIERDA   0x000030    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                   RECIBE   0x000010    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                  RETARDO   0x000039    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                      dos   0x00003d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                     tres   0x00003b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                      uno   0x00003f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000005    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                   RECIBE   0x000010    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                  DERECHA   0x000027    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                  CORRDER   0x00002b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                IZQUIERDA   0x000030    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                  CORRIZQ   0x000034    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                  RETARDO   0x000039    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                     tres   0x00003b    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                      dos   0x00003d    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+                      uno   0x00003f    program     static D:\Escuela\Semestre 23-2\LabMicros\Previos\P7\EJ5_1.asm
+
+

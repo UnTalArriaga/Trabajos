@@ -1,0 +1,6 @@
+Warning[205] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P3\EJ9.ASM 1 : Found directive in column 1. (processor)
+Message[301] C:\PROGRAM FILES (X86)\MICROCHIP\MPASM SUITE\P16F877A.INC 33 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P3\EJ9.ASM 16 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P3\EJ9.ASM 40 : Using default destination of 1 (file).
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P3\EJ9.ASM 42 : Using default destination of 1 (file).
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P3\EJ9.ASM 44 : Using default destination of 1 (file).

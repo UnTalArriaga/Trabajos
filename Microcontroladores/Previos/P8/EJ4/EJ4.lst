@@ -1,0 +1,249 @@
+CCS PCM C Compiler, Version 5.093, 4770               12-may.-23 12:18
+
+               Filename:   D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ4\EJ4.lst
+
+               ROM used:   200 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   8 (2%) at main() level
+                           11 (3%) worst case
+               Stack used: 1 locations (0 in main + 1 for interrupts)
+               Stack size: 8
+
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   08D
+0003:  NOP
+.................... #include <16f877.h> //biblioteca del micro
+.................... //////////// Standard Header file for the PIC16F877 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F877
+0004:  DATA 20,2A
+0005:  DATA 6F,32
+0006:  DATA EF,39
+0007:  DATA 20,36
+0008:  DATA EF,39
+0009:  DATA 20,31
+000A:  DATA 69,3A
+000B:  DATA 73,10
+000C:  DATA 65,37
+000D:  DATA E3,32
+000E:  DATA 6E,32
+000F:  DATA 69,32
+0010:  DATA EF,39
+0011:  DATA 20,05
+0012:  DATA 0D,00
+0013:  DATA 20,2A
+0014:  DATA 6F,32
+0015:  DATA EF,39
+0016:  DATA 20,36
+0017:  DATA EF,39
+0018:  DATA 20,36
+0019:  DATA 65,32
+001A:  DATA 73,10
+001B:  DATA 61,38
+001C:  DATA E1,33
+001D:  DATA 61,32
+001E:  DATA EF,39
+001F:  DATA 20,05
+0020:  DATA 0D,00
+0021:  MOVF   0B,W
+0022:  MOVWF  22
+0023:  BCF    0B.7
+0024:  BSF    03.5
+0025:  BSF    03.6
+0026:  BSF    0C.7
+0027:  BSF    0C.0
+0028:  NOP
+0029:  NOP
+002A:  BCF    03.5
+002B:  BCF    03.6
+002C:  BTFSC  22.7
+002D:  BSF    0B.7
+002E:  BSF    03.6
+002F:  MOVF   0C,W
+0030:  ANDLW  7F
+0031:  BTFSC  03.2
+0032:  GOTO   077
+0033:  BCF    03.6
+0034:  MOVWF  22
+0035:  BSF    03.6
+0036:  MOVF   0D,W
+0037:  BCF    03.6
+0038:  MOVWF  23
+0039:  BSF    03.6
+003A:  MOVF   0F,W
+003B:  BCF    03.6
+003C:  MOVWF  24
+003D:  MOVF   22,W
+003E:  BTFSS  0C.4
+003F:  GOTO   03E
+0040:  MOVWF  19
+0041:  MOVF   23,W
+0042:  BSF    03.6
+0043:  MOVWF  0D
+0044:  BCF    03.6
+0045:  MOVF   24,W
+0046:  BSF    03.6
+0047:  MOVWF  0F
+0048:  BCF    03.6
+0049:  MOVF   0B,W
+004A:  MOVWF  25
+004B:  BCF    0B.7
+004C:  BSF    03.5
+004D:  BSF    03.6
+004E:  BSF    0C.7
+004F:  BSF    0C.0
+0050:  NOP
+0051:  NOP
+0052:  BCF    03.5
+0053:  BCF    03.6
+0054:  BTFSC  25.7
+0055:  BSF    0B.7
+0056:  BSF    03.6
+0057:  RLF    0C,W
+0058:  RLF    0E,W
+0059:  ANDLW  7F
+005A:  BTFSC  03.2
+005B:  GOTO   077
+005C:  BCF    03.6
+005D:  MOVWF  22
+005E:  BSF    03.6
+005F:  MOVF   0D,W
+0060:  BCF    03.6
+0061:  MOVWF  23
+0062:  BSF    03.6
+0063:  MOVF   0F,W
+0064:  BCF    03.6
+0065:  MOVWF  24
+0066:  MOVF   22,W
+0067:  BTFSS  0C.4
+0068:  GOTO   067
+0069:  MOVWF  19
+006A:  MOVF   23,W
+006B:  BSF    03.6
+006C:  MOVWF  0D
+006D:  BCF    03.6
+006E:  MOVF   24,W
+006F:  BSF    03.6
+0070:  MOVWF  0F
+0071:  INCF   0D,F
+0072:  BTFSC  03.2
+0073:  INCF   0F,F
+0074:  BCF    03.6
+0075:  GOTO   021
+0076:  BSF    03.6
+0077:  BCF    03.6
+0078:  RETURN
+.................... 
+.................... #list
+.................... 
+.................... #fuses HS,NOPROTECT, //parámetros físicos - eléctricos del controlador
+.................... #use delay(clock=20000000) // 20 MHz establece el reloj a utilizar
+0079:  MOVLW  23
+007A:  MOVWF  04
+007B:  BCF    03.7
+007C:  MOVF   00,W
+007D:  BTFSC  03.2
+007E:  GOTO   08C
+007F:  MOVLW  06
+0080:  MOVWF  78
+0081:  CLRF   77
+0082:  DECFSZ 77,F
+0083:  GOTO   082
+0084:  DECFSZ 78,F
+0085:  GOTO   081
+0086:  MOVLW  7B
+0087:  MOVWF  77
+0088:  DECFSZ 77,F
+0089:  GOTO   088
+008A:  DECFSZ 00,F
+008B:  GOTO   07F
+008C:  RETURN
+.................... //utiliza estándar rs232 con la configuración:
+.................... //transmite por portC.6 y recibe por portC.7 con 9600 bauds
+.................... #use rs232(baud=9600, xmit=PIN_C6, rcv=PIN_C7)
+.................... // reserva la memoria donde esta el bootloader
+.................... #org 0x1F00, 0x1FFF void loader16F877(void) {}
+*
+1F00:  RETURN
+.................... // el programa controla 8 bits de salida e imprime en terminal mensaje
+.................... void main(){
+*
+008D:  MOVF   03,W
+008E:  ANDLW  1F
+008F:  MOVWF  03
+0090:  MOVLW  81
+0091:  BSF    03.5
+0092:  MOVWF  19
+0093:  MOVLW  A6
+0094:  MOVWF  18
+0095:  MOVLW  90
+0096:  BCF    03.5
+0097:  MOVWF  18
+0098:  CLRF   21
+0099:  CLRF   20
+009A:  BSF    03.5
+009B:  BSF    1F.0
+009C:  BSF    1F.1
+009D:  BSF    1F.2
+009E:  BCF    1F.3
+009F:  BCF    03.7
+....................    while(1){
+....................       output_b(0xff); // salida llena de 8 bits
+00A0:  CLRF   06
+00A1:  MOVLW  FF
+00A2:  BCF    03.5
+00A3:  MOVWF  06
+....................       printf(" Todos los bits encendidos \n\r"); //imprime en consola
+00A4:  MOVLW  04
+00A5:  BSF    03.6
+00A6:  MOVWF  0D
+00A7:  MOVLW  00
+00A8:  MOVWF  0F
+00A9:  BCF    03.6
+00AA:  CALL   021
+....................       delay_ms(1000); // retardo 1s
+00AB:  MOVLW  04
+00AC:  MOVWF  22
+00AD:  MOVLW  FA
+00AE:  MOVWF  23
+00AF:  CALL   079
+00B0:  DECFSZ 22,F
+00B1:  GOTO   0AD
+....................       output_b(0x00); // salida limpia de 8 bits
+00B2:  BSF    03.5
+00B3:  CLRF   06
+00B4:  BCF    03.5
+00B5:  CLRF   06
+....................       printf(" Todos los leds apagados \n\r"); //imprime en consola
+00B6:  MOVLW  13
+00B7:  BSF    03.6
+00B8:  MOVWF  0D
+00B9:  MOVLW  00
+00BA:  MOVWF  0F
+00BB:  BCF    03.6
+00BC:  CALL   021
+....................       delay_ms(1000); // retardo 1s
+00BD:  MOVLW  04
+00BE:  MOVWF  22
+00BF:  MOVLW  FA
+00C0:  MOVWF  23
+00C1:  CALL   079
+00C2:  DECFSZ 22,F
+00C3:  GOTO   0BF
+00C4:  BSF    03.5
+00C5:  GOTO   0A0
+....................    }//while
+.................... }//main
+00C6:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

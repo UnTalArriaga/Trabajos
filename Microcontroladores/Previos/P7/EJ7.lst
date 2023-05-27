@@ -1,0 +1,890 @@
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[205]: Found directive in column 1. (processor)
+                      00001 processor 16f877
+Warning[205]: Found directive in column 1. (include)
+                      00002 include<p16f877.inc>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F877 processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2013 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+                      00540         LIST
+Warning[207]: Found label after column 1. (valor1)
+  00000021            00003         valor1 equ h'21'
+Warning[207]: Found label after column 1. (valor2)
+  00000022            00004         valor2 equ h'22'
+Warning[207]: Found label after column 1. (valor3)
+  00000023            00005         valor3 equ h'23'
+Warning[207]: Found label after column 1. (cte1)
+  00000002            00006         cte1 equ .002
+Warning[207]: Found label after column 1. (cte2)
+  000000C8            00007         cte2 equ .200
+Warning[207]: Found label after column 1. (cte3)
+  00000052            00008         cte3 equ .82
+Warning[207]: Found label after column 1. (valor1s)
+  00000024            00009         valor1s equ h'24'
+Warning[207]: Found label after column 1. (valor2s)
+  00000025            00010         valor2s equ h'25'
+Warning[207]: Found label after column 1. (valor3s)
+  00000026            00011         valor3s equ h'26'
+Warning[207]: Found label after column 1. (cte1s)
+  00000250            00012         cte1s equ 250
+Warning[207]: Found label after column 1. (cte2s)
+  000000C8            00013         cte2s equ .200
+Warning[207]: Found label after column 1. (cte3s)
+  00000052            00014         cte3s equ .82
+0000                  00015         ORG 0
+0000   2805           00016         GOTO INICIO
+0005                  00017         ORG 5
+0005                  00018 INICIO:
+0005   0189           00019         CLRF PORTE
+0006   1683           00020         BSF STATUS,RP0 ; Cambiamos al banco 01
+0007   1303           00021         BCF STATUS,RP1 ;
+0008   3000           00022         MOVLW 00H ; Define puertos E como analógico
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0009   009F           00023         MOVWF ADCON1
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+000A   1518           00024         BSF TXSTA,BRGH ; prende bit BRGH --> alta velocidad
+000B   3081           00025         MOVLW D'129' ; W = 129, como BRGH = 1 => 129->9600 baudios
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+000C   0099           00026         MOVWF SPBRG ; se configura a 9600 baudios
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+000D   1218           00027         BCF TXSTA,SYNC ; apagamos bit SYNC --> modo asíncrono
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+000E   1698           00028         BSF TXSTA,TXEN ; prende bit TXEN --> habilita transmisión
+000F   1283           00029         BCF STATUS,RP0 ; cambiamos al banco 00
+0010   30E9           00030         MOVLW B'11101001' ; Cargamos 11 freq, 101 canales
+0011   009F           00031         MOVWF ADCON0
+0012   1798           00032         BSF RCSTA,SPEN ; prende bit SPEN --> habilita el puerto serie
+0013                  00033 CICLO:
+0013   2134           00034         CALL RETARDO_20US
+0014   2134           00035         CALL RETARDO_20US
+0015   2134           00036         CALL RETARDO_20US
+0016   2134           00037         CALL RETARDO_20US
+0017   2134           00038         CALL RETARDO_20US
+0018   2134           00039         CALL RETARDO_20US
+0019   2134           00040         CALL RETARDO_20US
+001A   2134           00041         CALL RETARDO_20US
+001B   2134           00042         CALL RETARDO_20US
+001C   2134           00043         CALL RETARDO_20US
+001D   2134           00044         CALL RETARDO_20US
+001E   2134           00045         CALL RETARDO_20US
+001F   2134           00046         CALL RETARDO_20US
+0020   20E7           00047         CALL REGRESO
+0021   151F           00048         BSF ADCON0,GO ; inicia conversión A/D
+0022   2134           00049         CALL RETARDO_20US ; espera un retardo
+0023                  00050 ESPERA:
+0023   191F           00051         BTFSC ADCON0,GO ; checa si acabó (vale 0)
+0024   2823           00052         GOTO ESPERA ; se queda en ciclo esperando
+0025   081E           00053         MOVF ADRESH,W ; lee el resultado
+0026   3001           00054         MOVLW d'1' ; 1
+0027   021E           00055         SUBWF ADRESH,W ; W = ADRESH - 1
+0028   1C03           00056         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0029   20EE           00057         CALL CERO ; imprime cero
+002A   1C03           00058         BTFSS STATUS,C ; si es positivo siguiente comparacion
+002B   2813           00059         GOTO CICLO ; vuelve a leer
+002C   3002           00060         MOVLW d'2' ; 2
+002D   021E           00061         SUBWF ADRESH,W ; W = ADRESH - 2
+002E   1C03           00062         BTFSS STATUS,C ; si es positivo siguiente comparacion
+002F   20FC           00063         CALL DOS ; imprime uno
+0030   1C03           00064         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0031   2813           00065         GOTO CICLO
+0032   3003           00066         MOVLW d'3' ; 3
+0033   021E           00067         SUBWF ADRESH,W ; W = ADRESH - 3
+0034   1C03           00068         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0035   210A           00069         CALL CUATRO ; imprime dos
+0036   1C03           00070         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0037   2813           00071         GOTO CICLO
+0038   3004           00072         MOVLW d'4' ; 4
+0039   021E           00073         SUBWF ADRESH,W ; W = ADRESH - 4
+003A   1C03           00074         BTFSS STATUS,C ; si es positivo siguiente comparacion
+003B   2118           00075         CALL SEIS ; imprime tres
+003C   1C03           00076         BTFSS STATUS,C ; si es positivo siguiente comparacion
+003D   2813           00077         GOTO CICLO
+003E   3005           00078         MOVLW d'5' ; 5
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+003F   021E           00079         SUBWF ADRESH,W ; W = ADRESH - 5
+0040   1C03           00080         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0041   2126           00081         CALL OCHO ; imprime cuatro
+0042   1C03           00082         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0043   2813           00083         GOTO CICLO
+0044   3006           00084         MOVLW d'6' ; 6
+0045   021E           00085         SUBWF ADRESH,W ; W = ADRESH - 6
+0046   1C03           00086         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0047   20F5           00087         CALL UNO
+0048   1C03           00088         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0049   20EE           00089         CALL CERO
+004A   1C03           00090         BTFSS STATUS,C ; si es positivo siguiente comparacion
+004B   2813           00091         GOTO CICLO
+004C   3007           00092         MOVLW d'7' ; 7
+004D   021E           00093         SUBWF ADRESH,W ; W = ADRESH - 7
+004E   1C03           00094         BTFSS STATUS,C ; si es positivo siguiente comparacion
+004F   20F5           00095         CALL UNO
+0050   1C03           00096         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0051   20FC           00097         CALL DOS
+0052   1C03           00098         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0053   2813           00099         GOTO CICLO
+0054   3008           00100         MOVLW d'8' ; 8
+0055   021E           00101         SUBWF ADRESH,W ; W = ADRESH - 8
+0056   1C03           00102         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0057   20F5           00103         CALL UNO
+0058   1C03           00104         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0059   210A           00105         CALL CUATRO
+005A   1C03           00106         BTFSS STATUS,C ; si es positivo siguiente comparacion
+005B   2813           00107         GOTO CICLO
+005C   3009           00108         MOVLW d'9' ; 9
+005D   021E           00109         SUBWF ADRESH,W ; W = ADRESH - 9
+005E   1C03           00110         BTFSS STATUS,C ; si es positivo siguiente comparacion
+005F   20F5           00111         CALL UNO
+0060   1C03           00112         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0061   2118           00113         CALL SEIS
+0062   1C03           00114         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0063   2813           00115         GOTO CICLO
+0064   300A           00116         MOVLW d'10' ; 10
+0065   021E           00117         SUBWF ADRESH,W ; W = ADRESH - 10
+0066   1C03           00118         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0067   20F5           00119         CALL UNO
+0068   1C03           00120         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0069   2126           00121         CALL OCHO
+006A   1C03           00122         BTFSS STATUS,C ; si es positivo siguiente comparacion
+006B   2813           00123         GOTO CICLO
+006C   300B           00124         MOVLW d'11' ; 11
+006D   021E           00125         SUBWF ADRESH,W ; W = ADRESH - 11
+006E   1C03           00126         BTFSS STATUS,C ; si es positivo siguiente comparacion
+006F   20FC           00127         CALL DOS
+0070   1C03           00128         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0071   20EE           00129         CALL CERO
+0072   1C03           00130         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0073   2813           00131         GOTO CICLO
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0074   300C           00132         MOVLW d'12' ; 12
+0075   021E           00133         SUBWF ADRESH,W ; W = ADRESH - 12
+0076   1C03           00134         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0077   20FC           00135         CALL DOS
+0078   1C03           00136         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0079   20FC           00137         CALL DOS
+007A   1C03           00138         BTFSS STATUS,C ; si es positivo siguiente comparacion
+007B   2813           00139         GOTO CICLO
+007C   300D           00140         MOVLW d'13' ; 13
+007D   021E           00141         SUBWF ADRESH,W ; W = ADRESH - 13
+007E   1C03           00142         BTFSS STATUS,C ; si es positivo siguiente comparacion
+007F   20FC           00143         CALL DOS
+0080   1C03           00144         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0081   210A           00145         CALL CUATRO
+0082   1C03           00146         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0083   2813           00147         GOTO CICLO
+0084   300E           00148         MOVLW d'14' ; 14
+0085   021E           00149         SUBWF ADRESH,W ; W = ADRESH - 14
+0086   1C03           00150         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0087   20FC           00151         CALL DOS
+0088   1C03           00152         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0089   2118           00153         CALL SEIS
+008A   1C03           00154         BTFSS STATUS,C ; si es positivo siguiente comparacion
+008B   2813           00155         GOTO CICLO
+008C   300F           00156         MOVLW d'15' ; 15
+008D   021E           00157         SUBWF ADRESH,W ; W = ADRESH - 15
+008E   1C03           00158         BTFSS STATUS,C ; si es positivo siguiente comparacion
+008F   20FC           00159         CALL DOS
+0090   1C03           00160         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0091   2126           00161         CALL OCHO
+0092   1C03           00162         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0093   2813           00163         GOTO CICLO
+0094   3010           00164         MOVLW d'16' ; 16
+0095   021E           00165         SUBWF ADRESH,W ; W = ADRESH - 16
+0096   1C03           00166         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0097   2103           00167         CALL TRES
+0098   1C03           00168         BTFSS STATUS,C ; si es positivo siguiente comparacion
+0099   20EE           00169         CALL CERO
+009A   1C03           00170         BTFSS STATUS,C ; si es positivo siguiente comparacion
+009B   2813           00171         GOTO CICLO
+009C   3011           00172         MOVLW d'17' ; 17
+009D   021E           00173         SUBWF ADRESH,W ; W = ADRESH - 17
+009E   1C03           00174         BTFSS STATUS,C ; si es positivo siguiente comparacion
+009F   2103           00175         CALL TRES
+00A0   1C03           00176         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00A1   20FC           00177         CALL DOS
+00A2   1C03           00178         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00A3   2813           00179         GOTO CICLO
+00A4   3012           00180         MOVLW d'18' ; 18
+00A5   021E           00181         SUBWF ADRESH,W ; W = ADRESH - 18
+00A6   1C03           00182         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00A7   2103           00183         CALL TRES
+00A8   1C03           00184         BTFSS STATUS,C ; si es positivo siguiente comparacion
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00A9   210A           00185         CALL CUATRO
+00AA   1C03           00186         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00AB   2813           00187         GOTO CICLO
+00AC   3013           00188         MOVLW d'19' ; 19
+00AD   021E           00189         SUBWF ADRESH,W ; W = ADRESH - 19
+00AE   1C03           00190         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00AF   2103           00191         CALL TRES
+00B0   1C03           00192         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00B1   2118           00193         CALL SEIS
+00B2   1C03           00194         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00B3   2813           00195         GOTO CICLO
+00B4   3014           00196         MOVLW d'20' ; 20
+00B5   021E           00197         SUBWF ADRESH,W ; W = ADRESH - 20
+00B6   1C03           00198         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00B7   2103           00199         CALL TRES
+00B8   1C03           00200         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00B9   2126           00201         CALL OCHO
+00BA   1C03           00202         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00BB   2813           00203         GOTO CICLO
+00BC   3015           00204         MOVLW d'21' ; 21
+00BD   021E           00205         SUBWF ADRESH,W ; W = ADRESH - 21
+00BE   1C03           00206         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00BF   210A           00207         CALL CUATRO
+00C0   1C03           00208         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00C1   20EE           00209         CALL CERO
+00C2   1C03           00210         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00C3   2813           00211         GOTO CICLO
+00C4   3016           00212         MOVLW d'22' ; 22
+00C5   021E           00213         SUBWF ADRESH,W ; W = ADRESH - 22
+00C6   1C03           00214         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00C7   210A           00215         CALL CUATRO
+00C8   1C03           00216         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00C9   20FC           00217         CALL DOS
+00CA   1C03           00218         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00CB   2813           00219         GOTO CICLO
+00CC   3017           00220         MOVLW d'23' ; 23
+00CD   021E           00221         SUBWF ADRESH,W ; W = ADRESH - 23
+00CE   1C03           00222         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00CF   210A           00223         CALL CUATRO
+00D0   1C03           00224         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00D1   210A           00225         CALL CUATRO
+00D2   1C03           00226         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00D3   2813           00227         GOTO CICLO
+00D4   3018           00228         MOVLW d'24' ; 24
+00D5   021E           00229         SUBWF ADRESH,W ; W = ADRESH - 24
+00D6   1C03           00230         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00D7   210A           00231         CALL CUATRO
+00D8   1C03           00232         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00D9   2118           00233         CALL SEIS
+00DA   1C03           00234         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00DB   2813           00235         GOTO CICLO
+00DC   3019           00236         MOVLW d'25' ; 25
+00DD   021E           00237         SUBWF ADRESH,W ; W = ADRESH - 25
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00DE   1C03           00238         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00DF   210A           00239         CALL CUATRO
+00E0   1C03           00240         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00E1   2126           00241         CALL OCHO
+00E2   1C03           00242         BTFSS STATUS,C ; si es positivo siguiente comparacion
+00E3   2813           00243         GOTO CICLO
+00E4   2111           00244         CALL CINCO
+00E5   20EE           00245         CALL CERO
+00E6   2813           00246         GOTO CICLO
+00E7                  00247 REGRESO
+00E7   300A           00248         movlw d'10' ; salto de linea return en W
+00E8   0099           00249         movwf TXREG ; carga W en registro transmision
+00E9   1683           00250         bsf STATUS,RP0 ; cambiamos al banco 01
+00EA                  00251 transmitereg
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00EA   1C98           00252         btfss TXSTA,TRMT ; espera mientras no termine trans
+00EB   28EA           00253         goto transmitereg ; espera...
+00EC   1283           00254         bcf STATUS,RP0 ; cambiamos al banco 00
+00ED   0008           00255         RETURN
+00EE                  00256 CERO
+00EE   3030           00257         movlw '0' ; carga char 0 en W
+00EF   0099           00258         movwf TXREG ; carga W en registro transmision
+00F0   1683           00259         bsf STATUS,RP0 ; cambiamos al banco 01
+00F1                  00260 transmite0
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00F1   1C98           00261         btfss TXSTA,TRMT ; espera mientras no termine trans
+00F2   28F1           00262         goto transmite0 ; espera...
+00F3   1283           00263         bcf STATUS,RP0 ; cambiamos al banco 00
+00F4   0008           00264         RETURN
+00F5                  00265 UNO
+00F5   3031           00266         movlw '1' ; carga char 1 en W
+00F6   0099           00267         movwf TXREG ; carga W en registro transmision
+00F7   1683           00268         bsf STATUS,RP0 ; cambiamos al banco 01
+00F8                  00269 transmite1
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00F8   1C98           00270         btfss TXSTA,TRMT ; espera mientras no termine trans
+00F9   28F8           00271         goto transmite1 ; espera...
+00FA   1283           00272         bcf STATUS,RP0 ; cambiamos al banco 00
+00FB   0008           00273         RETURN
+00FC                  00274 DOS
+00FC   3032           00275         movlw '2' ; carga char 2 en W
+00FD   0099           00276         movwf TXREG ; carga W en registro transmision
+00FE   1683           00277         bsf STATUS,RP0 ; cambiamos al banco 01
+00FF                  00278 transmite2
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+00FF   1C98           00279         btfss TXSTA,TRMT ; espera mientras no termine trans
+0100   28FF           00280         goto transmite2 ; espera...
+0101   1283           00281         bcf STATUS,RP0 ; cambiamos al banco 00
+0102   0008           00282         RETURN
+0103                  00283 TRES
+0103   3033           00284         movlw '3' ; carga char 3 en W
+0104   0099           00285         movwf TXREG ; carga W en registro transmision
+0105   1683           00286         bsf STATUS,RP0 ; cambiamos al banco 01
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0106                  00287 transmite3
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0106   1C98           00288         btfss TXSTA,TRMT ; espera mientras no termine trans
+0107   2906           00289         goto transmite3 ; espera...
+0108   1283           00290         bcf STATUS,RP0 ; cambiamos al banco 00
+0109   0008           00291         RETURN
+010A                  00292 CUATRO
+010A   3034           00293         movlw '4' ; carga char 4 en W
+010B   0099           00294         movwf TXREG ; carga W en registro transmision
+010C   1683           00295         bsf STATUS,RP0 ; cambiamos al banco 01
+010D                  00296 transmite4
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+010D   1C98           00297         btfss TXSTA,TRMT ; espera mientras no termine trans
+010E   290D           00298         goto transmite4 ; espera...
+010F   1283           00299         bcf STATUS,RP0 ; cambiamos al banco 00
+0110   0008           00300         RETURN
+0111                  00301 CINCO
+0111   3035           00302         movlw '5' ; carga char 5 en W
+0112   0099           00303         movwf TXREG ; carga W en registro transmision
+0113   1683           00304         bsf STATUS,RP0 ; cambiamos al banco 01
+0114                  00305 transmite5
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0114   1C98           00306         btfss TXSTA,TRMT ; espera mientras no termine trans
+0115   2914           00307         goto transmite5 ; espera...
+0116   1283           00308         bcf STATUS,RP0 ; cambiamos al banco 00
+0117   0008           00309         RETURN
+0118                  00310 SEIS
+0118   3036           00311         movlw '6' ; carga char 6 en W
+0119   0099           00312         movwf TXREG ; carga W en registro transmision
+011A   1683           00313         bsf STATUS,RP0 ; cambiamos al banco 01
+011B                  00314 transmite6
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+011B   1C98           00315         btfss TXSTA,TRMT ; espera mientras no termine trans
+011C   291B           00316         goto transmite6 ; espera...
+011D   1283           00317         bcf STATUS,RP0 ; cambiamos al banco 00
+011E   0008           00318         RETURN
+011F                  00319 SIETE
+011F   3037           00320         movlw '7' ; carga char 7 en W
+0120   0099           00321         movwf TXREG ; carga W en registro transmision
+0121   1683           00322         bsf STATUS,RP0 ; cambiamos al banco 01
+0122                  00323 transmite7
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0122   1C98           00324         btfss TXSTA,TRMT ; espera mientras no termine trans
+0123   2922           00325         goto transmite7 ; espera...
+0124   1283           00326         bcf STATUS,RP0 ; cambiamos al banco 00
+0125   0008           00327         RETURN
+0126                  00328 OCHO
+0126   3038           00329         movlw '8' ; carga char 8 en W
+0127   0099           00330         movwf TXREG ; carga W en registro transmision
+0128   1683           00331         bsf STATUS,RP0 ; cambiamos al banco 01
+0129                  00332 transmite8
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0129   1C98           00333         btfss TXSTA,TRMT ; espera mientras no termine trans
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE  8
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+012A   2929           00334         goto transmite8 ; espera...
+012B   1283           00335         bcf STATUS,RP0 ; cambiamos al banco 00
+012C   0008           00336         RETURN
+012D                  00337 NUEVE
+012D   3039           00338         movlw '9' ; carga char 9 en W
+012E   0099           00339         movwf TXREG ; carga W en registro transmision
+012F   1683           00340         bsf STATUS,RP0 ; cambiamos al banco 01
+0130                  00341 transmite9
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0130   1C98           00342         btfss TXSTA,TRMT ; espera mientras no termine trans
+0131   2930           00343         goto transmite9 ; espera...
+0132   1283           00344         bcf STATUS,RP0 ; cambiamos al banco 00
+0133   0008           00345         RETURN
+0134                  00346 RETARDO_20US ; subrutina de retardo
+0134   3002           00347         MOVLW cte1
+0135   00A1           00348         MOVWF valor1
+Warning[207]: Found label after column 1. (tres)
+0136                  00349         tres
+0136   30C8           00350         MOVLW cte2
+0137   00A2           00351         MOVWF valor2
+Warning[207]: Found label after column 1. (dos)
+0138                  00352         dos
+0138   3052           00353         MOVLW cte3
+0139   00A3           00354         MOVWF valor3
+Warning[207]: Found label after column 1. (uno)
+013A                  00355         uno
+Message[305]: Using default destination of 1 (file).
+013A   0BA3           00356         DECFSZ valor3
+013B   293A           00357         GOTO uno
+Message[305]: Using default destination of 1 (file).
+013C   0BA2           00358         DECFSZ valor2
+013D   2938           00359         GOTO dos
+Message[305]: Using default destination of 1 (file).
+013E   0BA1           00360         DECFSZ valor1
+013F   2936           00361         GOTO tres
+0140   0008           00362         RETURN
+                      00363         END
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+C                                 00000000
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CERO                              000000EE
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CICLO                             00000013
+CINCO                             00000111
+CKE                               00000006
+CKP                               00000004
+CREN                              00000004
+CSRC                              00000007
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CUATRO                            0000010A
+D                                 00000005
+DATA_ADDRESS                      00000005
+DC                                00000001
+DOS                               000000FC
+D_A                               00000005
+D_NOT_A                           00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+ESPERA                            00000023
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INICIO                            00000005
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+NUEVE                             0000012D
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+OBF                               00000006
+OCHO                              00000126
+OERR                              00000001
+OPTION_REG                        00000081
+P                                 00000004
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE 12
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+REGRESO                           000000E7
+RETARDO_20US                      00000134
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+R_W                               00000002
+S                                 00000003
+SEIS                              00000118
+SEN                               00000000
+SIETE                             0000011F
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE 13
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+SSPSTAT                           00000094
+STATUS                            00000003
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1                              0000000E
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRES                              00000103
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE 14
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXREG                             00000019
+TXSTA                             00000098
+UA                                00000001
+UNO                               000000F5
+W                                 00000000
+WCOL                              00000007
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_BOREN_OFF                        00003FBF
+_BOREN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00000FCF
+_CP_HALF                          00001FDF
+_CP_OFF                           00003FFF
+_CP_UPPER_256                     00002FEF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE 15
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_ENABLE_OFF                   00003DFF
+_WRT_ENABLE_ON                    00003FFF
+_WRT_OFF                          00003DFF
+_WRT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F877                          00000001
+cte1                              00000002
+cte1s                             00000250
+cte2                              000000C8
+cte2s                             000000C8
+cte3                              00000052
+cte3s                             00000052
+dos                               00000138
+transmite0                        000000F1
+transmite1                        000000F8
+transmite2                        000000FF
+transmite3                        00000106
+transmite4                        0000010D
+transmite5                        00000114
+transmite6                        0000011B
+transmite7                        00000122
+transmite8                        00000129
+transmite9                        00000130
+transmitereg                      000000EA
+tres                              00000136
+uno                               0000013A
+valor1                            00000021
+valor1s                           00000024
+valor2                            00000022
+valor2s                           00000025
+valor3                            00000023
+valor3s                           00000026
+MPASM  5.51                           EJ7.ASM   5-12-2023  15:50:57         PAGE 16
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+
+0000 : X----XXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0040 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0080 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+00C0 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0100 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0140 : X--------------- ---------------- ---------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:   317
+Program Memory Words Free:  7875
+
+
+Errors   :     0
+Warnings :    17 reported,     0 suppressed
+Messages :    19 reported,     0 suppressed
+
+

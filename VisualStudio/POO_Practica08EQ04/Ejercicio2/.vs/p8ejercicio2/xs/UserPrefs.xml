@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{B44711A6-547F-4A2B-A441-0BAEFF86DAEB}|Default">
+  <MonoDevelop.Ide.ItemProperties.p8ejercicio2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="bateria.cs">
+    <Files>
+      <File FileName="Program.cs" Line="12" Column="23" />
+      <File FileName="Instrumentos.cs" Line="1" Column="1" />
+      <File FileName="guitarra.cs" Line="1" Column="1" />
+      <File FileName="bateria.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="p8ejercicio2" expanded="True">
+            <Node name="p8ejercicio2" expanded="True">
+              <Node name="bateria.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

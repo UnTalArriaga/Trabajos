@@ -1,0 +1,6 @@
+C:\Users\Jair\source\repos\Práctica11\Ejemplo1\bin\Debug\Ejemplo1.exe
+C:\Users\Jair\source\repos\Práctica11\Ejemplo1\bin\Debug\Ejemplo1.pdb
+C:\Users\Jair\source\repos\Práctica11\Ejemplo1\obj\Debug\Ejemplo1.csprojAssemblyReference.cache
+C:\Users\Jair\source\repos\Práctica11\Ejemplo1\obj\Debug\Ejemplo1.csproj.CoreCompileInputs.cache
+C:\Users\Jair\source\repos\Práctica11\Ejemplo1\obj\Debug\Ejemplo1.exe
+C:\Users\Jair\source\repos\Práctica11\Ejemplo1\obj\Debug\Ejemplo1.pdb

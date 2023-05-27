@@ -1,0 +1,6 @@
+C:\Users\Jair\source\repos\Clase11Nov\Herencia\bin\Debug\Herencia.exe
+C:\Users\Jair\source\repos\Clase11Nov\Herencia\bin\Debug\Herencia.pdb
+C:\Users\Jair\source\repos\Clase11Nov\Herencia\obj\Debug\Herencia.csprojAssemblyReference.cache
+C:\Users\Jair\source\repos\Clase11Nov\Herencia\obj\Debug\Herencia.csproj.CoreCompileInputs.cache
+C:\Users\Jair\source\repos\Clase11Nov\Herencia\obj\Debug\Herencia.exe
+C:\Users\Jair\source\repos\Clase11Nov\Herencia\obj\Debug\Herencia.pdb

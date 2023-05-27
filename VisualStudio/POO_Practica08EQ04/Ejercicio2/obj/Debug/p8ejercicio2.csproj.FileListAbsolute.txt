@@ -1,0 +1,6 @@
+/Users/cecy/Downloads/p8ejercicio2/p8ejercicio2/bin/Debug/p8ejercicio2.exe
+/Users/cecy/Downloads/p8ejercicio2/p8ejercicio2/bin/Debug/p8ejercicio2.pdb
+/Users/cecy/Downloads/p8ejercicio2/p8ejercicio2/obj/Debug/p8ejercicio2.csprojAssemblyReference.cache
+/Users/cecy/Downloads/p8ejercicio2/p8ejercicio2/obj/Debug/p8ejercicio2.csproj.CoreCompileInputs.cache
+/Users/cecy/Downloads/p8ejercicio2/p8ejercicio2/obj/Debug/p8ejercicio2.exe
+/Users/cecy/Downloads/p8ejercicio2/p8ejercicio2/obj/Debug/p8ejercicio2.pdb

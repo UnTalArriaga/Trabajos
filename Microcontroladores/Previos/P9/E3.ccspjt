@@ -1,0 +1,35 @@
+[PROJECT]
+Target=E3.hex
+Processor_Text=PIC16F877
+CCSVersion=5.093
+Compiler=PCM
+[Target Data]
+FileList=E3.c
+[E3.c]
+Type=4
+[mru-list]
+1=E3.c
+[Units]
+Count=1
+1=E3 (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=2
+D1=19-05-2023
+D1_L=1
+D1_L1=[35275]Project Closed.
+D2=23-05-2023
+D2_L=2
+D2_L1=[64109]Project Opened.
+D2_L2=[64646]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=E3.c
+t1=1
+Count=1

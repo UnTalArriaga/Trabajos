@@ -1,0 +1,5 @@
+Compiling C:\Users\tobad\Desktop\p10\10.2 on 26-may.-23 at 16:23
+>>> Warning 202 "C:\Program Files (x86)\PICC\Devices\i2c_LCD.c" Line 174(13,17): Variable never used:   data
+      Memory usage:   ROM=18%      RAM=5% - 13%
+      0 Errors,  1 Warnings.
+Build Successful.

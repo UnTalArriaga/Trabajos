@@ -1,0 +1,114 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     LCD_ADDR
+022     lcd_total_rows
+023     lcd_total_columns
+024     new_row_request
+025     BACKLIGHT_LED
+026     lcd_gotoxy.data
+027     contador
+028-029 @sprintf_string
+02A     @PRINTF_X_700.P1
+02A     lcd_init.addr
+02A     @I2C_READU_129.P1
+02A     MAIN.@SCRATCH1
+02A     @PSTRINGC7_700.@SCRATCH1
+02B     @PRINTF_X_700.P1
+02B     lcd_init.col
+02B     @PSTRINGC7_700.@SCRATCH2
+02C     lcd_init.row
+02C     @PSTRINGC7_700.@SCRATCH3
+02D     lcd_init.i
+02D     LCD_PUTC.in_data
+02D     @PSTRINGC7_700.@SCRATCH4
+02E     @delay_ms1.P1
+02E     lcd_gotoxy.x
+02E     lcd_init.@SCRATCH1
+02F     lcd_gotoxy.y
+030     lcd_gotoxy.row
+031     lcd_gotoxy.column
+032     lcd_gotoxy.row_addr
+033     lcd_gotoxy.lcd_address
+034     lcd_gotoxy.@SCRATCH1
+035     lcd_send_byte.data
+036     lcd_send_byte.type
+037     lcd_send_byte.@SCRATCH1
+038     i2c_send_nibble.data
+039     i2c_send_nibble.type
+03A     i2c_send_nibble.@SCRATCH1
+03B     @I2C_WRITEU_129.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const714.call
+00000F  @const719.call
+000015  @delay_ms1
+000029  @I2C_WRITEU_129
+000039  i2c_send_nibble
+000089  lcd_send_byte
+0000A7  lcd_clear
+0000B1  lcd_init
+0000FD  lcd_gotoxy
+000134  LCD_PUTC
+000159  @PSTRINGC7_700
+0001AF  @I2C_READU_129
+0001BF  leer_i2c
+0001D3  escribir_i2c
+0001E8  escribir_puerto
+0001F0  escribir_lcd
+0001F9  @PRINTF_X_700
+00021C  MAIN
+00021C  @cinit1
+00023F  @cinit2
+
+Project Directory:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P9\
+
+Project Files:
+    E4.c                                                    [23-may.-23 20:46  CRC=86DC27A6]
+    C:\Program Files (x86)\PICC\Devices\16F877.h            [21-feb.-20 15:47  CRC=90274745]
+    C:\Program Files (x86)\PICC\Devices\i2c_LCD.c           [19-may.-23 09:26  CRC=16AFB211]
+
+Source signature=4462D30D
+Program memory checksum=0000
+Hex file CRC=4599
+
+Units:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P9\E4 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   E4.xsym
+    Errors:      E4.err
+    Ext Symbols: E4.esym
+    INHX8:       E4.hex
+    Symbols:     E4.sym
+    List:        E4.lst
+    Debug/COFF:  E4.cof
+    Project:     E4.ccspjt
+    Call Tree:   E4.tre
+    Statistics:  E4.STA

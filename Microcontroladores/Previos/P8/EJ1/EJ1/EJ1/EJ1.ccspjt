@@ -1,0 +1,33 @@
+[PROJECT]
+Target=EJ1.hex
+Processor_Text=PIC16F877
+CCSVersion=5.093
+Compiler=PCM
+[Target Data]
+FileList=EJ1.c
+[EJ1.c]
+Type=4
+[mru-list]
+1=EJ1.c
+
+[defines]
+buildcount=3
+
+[Opened Files]
+1=EJ1.c
+t1=1
+Count=1
+
+[ProjectLog]
+Days=1
+D1=12-05-2023
+D1_L=3
+D1_L1=[37487]Project Closed.
+D1_L2=[44218]Project Opened.
+D1_L3=[44261]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=EJ1 (main)

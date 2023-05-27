@@ -1,0 +1,97 @@
+processor 16f877
+include<p16f877.inc>
+	ORG 0
+	GOTO INICIO
+	ORG 5
+INICIO:
+	BSF STATUS,RP0 ; Cambiamos al banco 01
+	BCF STATUS,RP1 ;
+	BSF TXSTA,BRGH ; prende bit BRGH --> alta velocidad
+	MOVLW D'129' ; W = 129, como BRGH = 1 => 129->9600 baudios
+	MOVWF SPBRG ; se configura a 9600 baudios
+	BCF TXSTA,SYNC ; apagamos bit SYNC --> modo asíncrono
+	BSF TXSTA,TXEN ; prende bit TXEN --> habilita transmisión
+	BCF STATUS,RP0 ; cambiamos al banco 00
+	BSF RCSTA,SPEN ; prende bit SPEN --> habilita el puerto serie
+TRANS:
+	MOVLW 'H' ; carga el valor de H a W
+	MOVWF TXREG ; carga el registro de transferencia con W
+	BSF STATUS,RP0 ; cambiamos al banco 01
+TRANSMITE1:
+	BTFSS TXSTA,TRMT ; checa si se realizó la transmisión
+	GOTO TRANSMITE1 ; esperamos bandera transmisión
+	BCF STATUS,RP0 ; cambiamos al banco 00
+	MOVLW 'O' ;
+	MOVWF TXREG ;
+	BSF STATUS,RP0 ;
+TRANSMITE2:
+	BTFSS TXSTA,TRMT ;
+	GOTO TRANSMITE2 ;
+	BCF STATUS,RP0 ;
+	MOVLW 'L' ;
+	MOVWF TXREG ;
+	BSF STATUS,RP0 ;
+TRANSMITE3:
+	BTFSS TXSTA,TRMT ;
+	GOTO TRANSMITE3 ;
+	BCF STATUS,RP0 ;
+	MOVLW 'A' ;
+	MOVWF TXREG ;
+	BSF STATUS,RP0 ;
+TRANSMITE4:
+	BTFSS TXSTA,TRMT ;
+	GOTO TRANSMITE4 ;
+	BCF STATUS,RP0 ;
+	MOVLW ' ' ;
+	MOVWF TXREG ;
+	BSF STATUS,RP0 ;
+TRANSMITE5:
+	BTFSS TXSTA,TRMT ;
+	GOTO TRANSMITE5 ;
+	BCF STATUS,RP0 ;
+	MOVLW 'm' ;
+	MOVWF TXREG ;
+	BSF STATUS,RP0 ;
+TRANSMITE6:
+	BTFSS TXSTA,TRMT ;
+	GOTO TRANSMITE6 ;
+	BCF STATUS,RP0 ;
+	MOVLW 'u' ;
+	MOVWF TXREG ;
+	BSF STATUS,RP0 ;
+TRANSMITE7:
+	BTFSS TXSTA,TRMT ;
+	GOTO TRANSMITE7 ;
+	BCF STATUS,RP0 ;
+	MOVLW 'n' ;
+	MOVWF TXREG ;
+	BSF STATUS,RP0 ;
+TRANSMITE8:
+	BTFSS TXSTA,TRMT ;
+	GOTO TRANSMITE8 ;
+	BCF STATUS,RP0 ;
+	MOVLW 'd' ;
+	MOVWF TXREG ;
+	BSF STATUS,RP0 ;
+TRANSMITE9:
+	BTFSS TXSTA,TRMT ;
+	GOTO TRANSMITE9 ;
+	BCF STATUS,RP0 ;
+	MOVLW 'o' ;
+	MOVWF TXREG ;
+	BSF STATUS,RP0 ;
+TRANSMITE10:
+	BTFSS TXSTA,TRMT ;
+	GOTO TRANSMITE10 ;
+	BCF STATUS,RP0 ;
+	MOVLW d'10' ; salto de línea
+	MOVWF TXREG ;
+	BSF STATUS,RP0 ;
+TRANSMITE11:
+	BTFSS TXSTA,TRMT ;
+	GOTO TRANSMITE11 ;
+	BCF STATUS,RP0 ;
+FIN:
+	GOTO FIN ; se queda en este ciclo para siempre
+	;GOTO TRANS ; solo transmite una vez
+	END

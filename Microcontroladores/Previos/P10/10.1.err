@@ -1,0 +1,5 @@
+Compiling C:\Users\tobad\Desktop\p10\10.1 on 26-may.-23 at 16:24
+>>> Warning 208 "C:\Users\tobad\Desktop\p10\10.1.c" Line 12(1,8): Function not void and does not return a value  ext_int
+      Memory usage:   ROM=1%      RAM=4% - 4%
+      0 Errors,  1 Warnings.
+Build Successful.

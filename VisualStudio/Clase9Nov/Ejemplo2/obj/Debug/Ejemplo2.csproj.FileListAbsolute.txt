@@ -1,0 +1,6 @@
+C:\Users\Jair\source\repos\Clase9Nov\Ejemplo2\bin\Debug\Ejemplo2.exe
+C:\Users\Jair\source\repos\Clase9Nov\Ejemplo2\bin\Debug\Ejemplo2.pdb
+C:\Users\Jair\source\repos\Clase9Nov\Ejemplo2\obj\Debug\Ejemplo2.csprojAssemblyReference.cache
+C:\Users\Jair\source\repos\Clase9Nov\Ejemplo2\obj\Debug\Ejemplo2.csproj.CoreCompileInputs.cache
+C:\Users\Jair\source\repos\Clase9Nov\Ejemplo2\obj\Debug\Ejemplo2.exe
+C:\Users\Jair\source\repos\Clase9Nov\Ejemplo2\obj\Debug\Ejemplo2.pdb

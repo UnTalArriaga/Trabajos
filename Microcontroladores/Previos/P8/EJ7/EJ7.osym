@@ -1,0 +1,44 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+CCP_2
+CCP_2_LOW
+CCP_2_HIGH
+PSP_DATA
+lcd
+lcdlat
+lcdtris
+conteo
+dato
+ante
+
+Project Directory:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ7\
+
+Project Files:
+    EJ7.c                                                   [12-may.-23 12:09  CRC=99DF4234]
+    C:\Program Files (x86)\PICC\Devices\16F877.h            [21-feb.-20 15:47  CRC=90274745]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-feb.-16 09:05  CRC=D1A6378A]
+
+Source signature=CD52F88D
+
+Units:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ7\EJ7
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   EJ7.xsym
+    Errors:      ..\EJ1\EJ1.err
+    Ext Symbols: EJ7.esym
+    Object:      EJ7.o
+    Symbols:     EJ7.osym

@@ -1,0 +1,169 @@
+CCS PCM C Compiler, Version 5.093, 4770               18-may.-23 19:12
+
+               Filename:   D:\Escuela\Semestre 23-2\LabMicros\Previos\P9\E2.lst
+
+               ROM used:   112 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   8 (2%) at main() level
+                           9 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   045
+0003:  NOP
+.................... #include <16F877.h> // biblioteca del microprocesador
+.................... //////////// Standard Header file for the PIC16F877 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F877
+.................... 
+.................... #list
+.................... 
+.................... #fuses HS,NOWDT,NOPROTECT // conexiones eléctricas
+.................... #use delay(clock=20000000) // 20 MHz
+*
+002F:  MOVLW  23
+0030:  MOVWF  04
+0031:  BCF    03.7
+0032:  MOVF   00,W
+0033:  BTFSC  03.2
+0034:  GOTO   042
+0035:  MOVLW  06
+0036:  MOVWF  78
+0037:  CLRF   77
+0038:  DECFSZ 77,F
+0039:  GOTO   038
+003A:  DECFSZ 78,F
+003B:  GOTO   037
+003C:  MOVLW  7B
+003D:  MOVWF  77
+003E:  DECFSZ 77,F
+003F:  GOTO   03E
+0040:  DECFSZ 00,F
+0041:  GOTO   035
+0042:  BCF    0A.3
+0043:  BCF    0A.4
+0044:  GOTO   06B (RETURN)
+.................... #use i2c(MASTER, SDA=PIN_C4, SCL=PIN_C3,SLOW, NOFORCE_SW) // configuración comunicación síncrona I2C
+*
+0004:  BCF    14.7
+0005:  BCF    0C.3
+0006:  MOVF   22,W
+0007:  MOVWF  13
+0008:  MOVLW  02
+0009:  BTFSC  14.7
+000A:  GOTO   012
+000B:  BTFSS  0C.3
+000C:  GOTO   00B
+000D:  MOVLW  00
+000E:  BSF    03.5
+000F:  BTFSC  11.6
+0010:  MOVLW  01
+0011:  BCF    03.5
+0012:  MOVWF  78
+0013:  RETURN
+.................... int contador=0; // variable contadora para aumenta
+.................... // función para escribir por medio de i2c
+.................... void escribir_i2c() {
+.................... i2c_start(); // inicia comunicación i2c
+0014:  BSF    03.5
+0015:  BSF    11.0
+0016:  BTFSC  11.0
+0017:  GOTO   016
+.................... i2c_write(0x42); //escribe 0x42=0100001 0 --> 0100001=33 dir, 0=Escritura
+0018:  MOVLW  42
+0019:  BCF    03.5
+001A:  MOVWF  22
+001B:  CALL   004
+.................... i2c_write(contador); // escribe la variable global contador
+001C:  MOVF   21,W
+001D:  MOVWF  22
+001E:  CALL   004
+.................... i2c_stop(); // finaliza comunicación i2c
+001F:  BSF    03.5
+0020:  BSF    11.2
+0021:  BTFSC  11.2
+0022:  GOTO   021
+0023:  BCF    03.5
+0024:  BCF    0A.3
+0025:  BCF    0A.4
+0026:  GOTO   065 (RETURN)
+.................... }
+.................... // función para escribir a través de puerto paralelo
+.................... void escribir_puerto() {
+.................... output_d(contador);
+0027:  BSF    03.5
+0028:  CLRF   08
+0029:  BCF    03.5
+002A:  MOVF   21,W
+002B:  MOVWF  08
+002C:  BCF    0A.3
+002D:  BCF    0A.4
+002E:  GOTO   066 (RETURN)
+.................... }
+.................... //el programa es un cronometro de medio segundo
+.................... void main() {
+*
+0045:  MOVF   03,W
+0046:  ANDLW  1F
+0047:  MOVWF  03
+0048:  MOVLW  FF
+0049:  MOVWF  20
+004A:  BSF    20.3
+004B:  MOVF   20,W
+004C:  BSF    03.5
+004D:  MOVWF  07
+004E:  BCF    03.5
+004F:  BSF    20.4
+0050:  MOVF   20,W
+0051:  BSF    03.5
+0052:  MOVWF  07
+0053:  MOVLW  31
+0054:  MOVWF  13
+0055:  MOVLW  28
+0056:  BCF    03.5
+0057:  MOVWF  14
+0058:  BSF    03.5
+0059:  BSF    14.7
+005A:  BCF    14.6
+005B:  BCF    03.5
+005C:  CLRF   21
+005D:  BSF    03.5
+005E:  BSF    1F.0
+005F:  BSF    1F.1
+0060:  BSF    1F.2
+0061:  BCF    1F.3
+0062:  BCF    03.7
+.................... while(true) {
+.................... escribir_i2c(); // escribe en consola
+0063:  BCF    03.5
+0064:  GOTO   014
+.................... escribir_puerto(); // escribe por puerto b
+0065:  GOTO   027
+.................... delay_ms(500); // retardo de medio segundo
+0066:  MOVLW  02
+0067:  MOVWF  22
+0068:  MOVLW  FA
+0069:  MOVWF  23
+006A:  GOTO   02F
+006B:  DECFSZ 22,F
+006C:  GOTO   068
+.................... contador++; // aumenta valor de contador
+006D:  INCF   21,F
+006E:  GOTO   064
+.................... }
+.................... }
+.................... 
+006F:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

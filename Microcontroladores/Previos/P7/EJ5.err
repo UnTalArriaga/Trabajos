@@ -1,0 +1,19 @@
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 3 : Found label after column 1. (valor1)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 4 : Found label after column 1. (valor2)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 5 : Found label after column 1. (valor3)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 6 : Found label after column 1. (cte1)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 7 : Found label after column 1. (cte2)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 8 : Found label after column 1. (cte3)
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 16 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 17 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 19 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 20 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 48 : Found label after column 1. (DERECHA)
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 54 : Using default destination of 1 (file).
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 64 : Using default destination of 1 (file).
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 71 : Found label after column 1. (tres)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 74 : Found label after column 1. (dos)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 77 : Found label after column 1. (uno)
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 78 : Using default destination of 1 (file).
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 80 : Using default destination of 1 (file).
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P7\EJ5.ASM 82 : Using default destination of 1 (file).

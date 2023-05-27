@@ -1,0 +1,12 @@
+C:\Users\Jair\source\repos\Práctica11\Ejemplo2\bin\Debug\Ejemplo2.exe
+C:\Users\Jair\source\repos\Práctica11\Ejemplo2\bin\Debug\Ejemplo2.pdb
+C:\Users\Jair\source\repos\Práctica11\Ejemplo2\obj\Debug\Ejemplo2.csproj.CoreCompileInputs.cache
+C:\Users\Jair\source\repos\Práctica11\Ejemplo2\obj\Debug\Ejemplo2.exe
+C:\Users\Jair\source\repos\Práctica11\Ejemplo2\obj\Debug\Ejemplo2.pdb
+C:\Users\Jair\source\repos\Práctica11\Ejemplo2\obj\Debug\Ejemplo2.csprojAssemblyReference.cache
+C:\Users\vaio\Desktop\Tareas\POO\Práctica11\Ejemplo2\bin\Debug\Ejemplo2.exe
+C:\Users\vaio\Desktop\Tareas\POO\Práctica11\Ejemplo2\bin\Debug\Ejemplo2.pdb
+C:\Users\vaio\Desktop\Tareas\POO\Práctica11\Ejemplo2\obj\Debug\Ejemplo2.csprojAssemblyReference.cache
+C:\Users\vaio\Desktop\Tareas\POO\Práctica11\Ejemplo2\obj\Debug\Ejemplo2.csproj.CoreCompileInputs.cache
+C:\Users\vaio\Desktop\Tareas\POO\Práctica11\Ejemplo2\obj\Debug\Ejemplo2.exe
+C:\Users\vaio\Desktop\Tareas\POO\Práctica11\Ejemplo2\obj\Debug\Ejemplo2.pdb

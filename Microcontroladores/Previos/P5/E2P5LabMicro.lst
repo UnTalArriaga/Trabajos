@@ -1,0 +1,651 @@
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[205]: Found directive in column 1. (processor)
+Warning[215]: Processor superseded by command line.  Verify processor symbol.
+                      00001 processor p16f877      ;Se indica el procesador con el que se 
+Warning[205]: Found directive in column 1. (include)
+                      00002 include <p16f877.inc> ;trabajara
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F877 processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2013 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+                      00540         LIST
+                      00003  
+  00000021            00004 valor1 equ h'21'
+  00000022            00005 valor2 equ h'22'
+  00000023            00006 valor3 equ h'23'
+  00000003            00007 cte1 equ 03h   ;50us
+  00000008            00008 cte2 equ 08h  ;250us
+  00000030            00009 cte3 equ 30h  ;0.25s
+                      00010  
+                      00011 ;valores para los retrasos de cada "estado de duraci€n"
+  00000024            00012 contadorq1 equ 0x24
+  00000025            00013 contadorq2 equ 0x25
+  00000026            00014 contador3 equ 0x26
+                      00015  
+0000                  00016             org 0h            ;Se indica el vector de reset
+0000   2805           00017             goto Inicio       ;
+                      00018  
+0005                  00019             org 5h            ;Inicio del programa
+0005                  00020 Inicio:               ;
+0005   0185           00021             clrf PORTA        ;Se limpia la informacion de los puertos A
+0006   1683           00022             bsf STATUS,RP0    ;Cambio al Banco 1
+0007   1303           00023             bcf STATUS,RP1    ;
+0008   3000           00024             movlw h'0'        ;Se carga W con 00
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0009   0086           00025             movwf TRISB       ;Configura Puerto B como salida
+000A   0186           00026             clrf PORTB        ;Limpia los bits de Puerto B
+                      00027  
+000B   3006           00028             movlw 0x06         ;Configura los puertos A como digitales
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+000C   009F           00029             movwf ADCON1
+000D   303F           00030             movlw 0x3f         ;Configura el Puerto A como entrada
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+000E   0085           00031             movwf TRISA
+000F   1283           00032             bcf STATUS,RP0    ;Regresa al Banco 0
+                      00033  
+0010                  00034 Ciclo:
+0010   0805           00035             movfw PORTA
+0011   3A00           00036             xorlw 0X00        ;Revisamos si se solicita el estado 0 (Motores parados)
+0012   1903           00037             btfsc STATUS,Z
+0013   2824           00038             goto q0
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00039  
+0014   0805           00040             movfw PORTA
+0015   3A01           00041             xorlw 0X01        ;Revisamos si se solicita el estado 1 (5 segundos horario)
+0016   1903           00042             btfsc STATUS,Z
+0017   282A           00043             goto q1_1
+                      00044             
+0018   0805           00045             movfw PORTA
+0019   3A02           00046             xorlw 0X02        ;Revisamos si se solicita el estado 2 (10 anti-horario)
+001A   1903           00047             btfsc STATUS,Z
+001B   2847           00048             goto q2_2
+                      00049  
+001C   0805           00050             movfw PORTA
+001D   3A03           00051             xorlw 0X03        ;Revisamos si se solicita el estado 3 (5 vueltas horario)
+001E   1903           00052             btfsc STATUS,Z
+001F   2864           00053             goto q3_3
+                      00054  
+0020   0805           00055             movfw PORTA
+0021   3A04           00056             xorlw 0X04        ;Revisamos si se solicita el estado 3 (5 vueltas anti horario)
+0022   1903           00057             btfsc STATUS,Z
+0023   286A           00058             goto q4_4
+                      00059  
+0024                  00060 q0: ;Estado q0: Motor en paro
+0024   0186           00061             clrf PORTB        ;Se limpian los puertos B
+0025   0805           00062             movfw PORTA
+0026   3A00           00063             xorlw 0x00
+0027   1903           00064             btfsc STATUS,Z
+0028   2810           00065             goto Ciclo
+0029   2824           00066             goto q0
+                      00067  
+002A                  00068 q1_1:
+002A   3002           00069             movlw 0x02
+002B   00A6           00070             movwf contador3
+002C   282D           00071             goto q1
+                      00072  
+002D                  00073 q1: ;Estado q1: Gira en sentido horario durante 5 segundos
+002D   30FF           00074             movlw 0xff        ;(5 segundos)
+002E   00A4           00075             movwf contadorq1
+002F   2830           00076             goto Ciclo_horario
+                      00077  
+0030                  00078 Ciclo_horario:
+0030   0805           00079             movfw PORTA
+0031   3A00           00080             xorlw 0x00
+0032   1903           00081             btfsc STATUS,Z
+0033   2824           00082             goto q0
+                      00083  
+0034   2070           00084             call retardo
+0035   3080           00085             movlw b'10000000'
+0036   0086           00086             movwf PORTB
+                      00087             
+0037   2070           00088             call retardo
+0038   3040           00089             movlw b'01000000'
+0039   0086           00090             movwf PORTB
+                      00091             
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+003A   2070           00092             call retardo
+003B   3020           00093             movlw b'00100000'
+003C   0086           00094             movwf PORTB
+                      00095             
+003D   2070           00096             call retardo
+003E   3010           00097             movlw b'00010000'
+003F   0086           00098             movwf PORTB
+                      00099  
+Message[305]: Using default destination of 1 (file).
+0040   03A4           00100             decf contadorq1
+0041   1D03           00101             btfss STATUS,Z
+0042   2830           00102             goto Ciclo_horario
+Message[305]: Using default destination of 1 (file).
+0043   03A6           00103             decf contador3
+0044   1D03           00104             btfss STATUS,Z
+0045   2830           00105             goto Ciclo_horario
+0046   2824           00106             goto q0
+                      00107  
+0047                  00108 q2_2:
+0047   3003           00109             movlw 0x03
+0048   00A6           00110             movwf contador3
+0049   284A           00111             goto q2
+                      00112  
+004A                  00113 q2: ;Estado q2: Gira en sentido anti horario por 10 segundos
+004A   30FF           00114             movlw 0xff          ;(10 segundos)
+004B   00A5           00115             movwf contadorq2
+004C   284D           00116             goto Ciclo_antihorario
+                      00117  
+004D                  00118 Ciclo_antihorario:
+004D   0805           00119             movfw PORTA
+004E   3A00           00120             xorlw 0x00
+004F   1903           00121             btfsc STATUS,Z
+0050   2824           00122             goto q0
+                      00123  
+0051   2070           00124             call retardo
+0052   3010           00125             movlw b'00010000'
+0053   0086           00126             movwf PORTB
+0054   2070           00127             call retardo
+                      00128  
+0055   3020           00129             movlw b'00100000'
+0056   0086           00130             movwf PORTB
+0057   2070           00131             call retardo
+                      00132  
+0058   3040           00133             movlw b'01000000'
+0059   0086           00134             movwf PORTB
+005A   2070           00135             call retardo
+                      00136  
+005B   3080           00137             movlw b'10000000'
+005C   0086           00138             movwf PORTB
+                      00139  
+Message[305]: Using default destination of 1 (file).
+005D   03A5           00140             decf contadorq2
+005E   1D03           00141             btfss STATUS,Z
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+005F   284D           00142             goto Ciclo_antihorario;
+Message[305]: Using default destination of 1 (file).
+0060   03A6           00143             decf contador3
+0061   1D03           00144             btfss STATUS,Z
+0062   284D           00145             goto Ciclo_antihorario;
+0063   2824           00146             goto q0
+                      00147  
+0064                  00148 q3_3:
+0064   300A           00149             movlw 0x0A
+0065   00A6           00150             movwf contador3
+0066   2867           00151             goto q3
+                      00152  
+0067                  00153 q3: ;Estado q3: Gira cinco vueltas en sentido horario
+0067   30FF           00154             movlw 0xff           ;Repetir el patr€n 5 veces
+0068   00A4           00155             movwf contadorq1
+0069   2830           00156             goto Ciclo_horario
+                      00157  
+006A                  00158 q4_4:
+006A   3014           00159             movlw 0x14
+006B   00A6           00160             movwf contador3
+006C   286D           00161             goto q4
+                      00162  
+006D                  00163 q4: ;Estado q4: Gira 10 vueltas en sentido anti horario
+006D   300B           00164             movlw 0x0b           ;Repetir el patr€n 10 veces
+006E   00A5           00165             movwf contadorq2
+006F   284D           00166             goto Ciclo_antihorario
+                      00167  
+0070                  00168 retardo:
+0070   3003           00169             movlw cte1
+0071   00A1           00170             movwf valor1
+0072                  00171 tres:
+0072   0088           00172             movwf cte2
+0073   00A2           00173             movwf valor2
+0074                  00174 dos: 
+0074   3030           00175             movlw cte3
+0075   00A3           00176             movwf valor3
+0076                  00177 uno: 
+Message[305]: Using default destination of 1 (file).
+0076   0BA3           00178             decfsz valor3
+0077   2876           00179             goto uno          ;3N+1
+Message[305]: Using default destination of 1 (file).
+0078   0BA2           00180             decfsz valor2
+0079   2874           00181             goto dos          ;(3N+1)M+3M+1
+Message[305]: Using default destination of 1 (file).
+007A   0BA1           00182             decfsz valor1
+007B   2872           00183             goto tres         ;[(3N+1)M+3M+1]P+3P+1
+007C   0008           00184             return
+                      00185  
+                      00186             end               ;Fin del programa
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+C                                 00000000
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CKE                               00000006
+CKP                               00000004
+CREN                              00000004
+CSRC                              00000007
+Ciclo                             00000010
+Ciclo_antihorario                 0000004D
+Ciclo_horario                     00000030
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+D                                 00000005
+DATA_ADDRESS                      00000005
+DC                                00000001
+D_A                               00000005
+D_NOT_A                           00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+Inicio                            00000005
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+P                                 00000004
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+RC8_9                             00000006
+RC9                               00000006
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+R_W                               00000002
+S                                 00000003
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1                              0000000E
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXREG                             00000019
+TXSTA                             00000098
+UA                                00000001
+W                                 00000000
+WCOL                              00000007
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_BOREN_OFF                        00003FBF
+_BOREN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00000FCF
+_CP_HALF                          00001FDF
+_CP_OFF                           00003FFF
+_CP_UPPER_256                     00002FEF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_ENABLE_OFF                   00003DFF
+_WRT_ENABLE_ON                    00003FFF
+_WRT_OFF                          00003DFF
+_WRT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F877                          00000001
+contador3                         00000026
+contadorq1                        00000024
+contadorq2                        00000025
+cte1                              00000003
+cte2                              00000008
+cte3                              00000030
+dos                               00000074
+q0                                00000024
+q1                                0000002D
+q1_1                              0000002A
+q2                                0000004A
+q2_2                              00000047
+q3                                00000067
+q3_3                              00000064
+q4                                0000006D
+q4_4                              0000006A
+retardo                           00000070
+tres                              00000072
+uno                               00000076
+valor1                            00000021
+valor2                            00000022
+valor3                            00000023
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+0000 : X----XXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0040 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXX---
+
+All other memory blocks unused.
+
+Program Memory Words Used:   121
+Program Memory Words Free:  8071
+
+
+MPASM  5.51                  E2P5LABMICRO.ASM   4-28-2023  16:38:20         PAGE 12
+
+
+
+
+
+Errors   :     0
+Warnings :     3 reported,     0 suppressed
+Messages :    10 reported,     0 suppressed
+
+

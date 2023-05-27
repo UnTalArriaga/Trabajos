@@ -1,0 +1,12 @@
+Pluma Negra|Pluma de Color Negro|8|3|BIC001|SP03001|Coyoacán|Artículos de Escritorio
+Pluma Roja|Pluma de Color Rojo|8|5|BIC002|SP03002|Coyoacán|Artículos de Escritorio
+Pluma Azul|Pluma de Color Azul|8|17|BIC003|SP03003|Coyoacán|Artículos de Escritorio
+Lapíz|Lapíz #2|4|2|SP001|SP03004|Coyoacán|Artículos de Escritorio
+Cuaderno Raya|Cuaderno Rayado|23|50|NOR001|SP03005|Coyoacán|Cuadernos
+Cuaderno Cuadro Chico|Cuaderno Cuadro 0.5cm|30|0|NOR002|SP03006|Coyoacán|Cuadernos
+Cuaderno Cuadro Grande|Cuaderno Cuadro 1cm|30|3|NOR003|SP03007|Coyoacán|Cuadernos
+Tijeras|Tijeras Puntas Redondeada|13|0|BAR001|SP03008|Coyoacán|Corte
+Cuter|Cuter Sencillo|21|0|CUT001|SP03009|Coyoacán|Corte
+Hoja Bond|Hoja tamaño Bond Blanca|0.25|11|BON001|SP03010|Coyoacán|Papel
+Hoja Bond Color|Hoja tamaño Bond Colores diversos|1.50|3|BON002|SP03011|Coyoacán|Papel
+Cartulina Blanca|Cartulina Color Blanco|4|1|CAR001|SP03012|Coyoacán|Papel

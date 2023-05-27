@@ -1,0 +1,29 @@
+C:\Users\vaio\source\repos\Proyecto\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\vaio\source\repos\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\vaio\source\repos\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\vaio\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.csprojAssemblyReference.cache
+C:\Users\vaio\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\vaio\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\vaio\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\joshu\source\repos\Proyecto\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\joshu\source\repos\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\joshu\source\repos\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\joshu\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.csprojAssemblyReference.cache
+C:\Users\joshu\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\joshu\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\joshu\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\vaio\Desktop\Proyecto1\Proyecto\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\vaio\Desktop\Proyecto1\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\vaio\Desktop\Proyecto1\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\vaio\Desktop\Proyecto1\Proyecto\Proyecto\obj\Debug\Proyecto.csprojAssemblyReference.cache
+C:\Users\vaio\Desktop\Proyecto1\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\vaio\Desktop\Proyecto1\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\vaio\Desktop\Proyecto1\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+D:\Escuela\Semestre 21-2\POO\Proyecto1\Proyecto\Proyecto\bin\Debug\Proyecto.exe.config
+D:\Escuela\Semestre 21-2\POO\Proyecto1\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+D:\Escuela\Semestre 21-2\POO\Proyecto1\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+D:\Escuela\Semestre 21-2\POO\Proyecto1\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.AssemblyReference.cache
+D:\Escuela\Semestre 21-2\POO\Proyecto1\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.SuggestedBindingRedirects.cache
+D:\Escuela\Semestre 21-2\POO\Proyecto1\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+D:\Escuela\Semestre 21-2\POO\Proyecto1\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+D:\Escuela\Semestre 21-2\POO\Proyecto1\Proyecto\Proyecto\obj\Debug\Proyecto.pdb

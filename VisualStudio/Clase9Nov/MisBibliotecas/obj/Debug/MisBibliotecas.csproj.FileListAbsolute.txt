@@ -1,0 +1,6 @@
+C:\Users\Jair\source\repos\Clase9Nov\MisBibliotecas\bin\Debug\MisBibliotecas.dll
+C:\Users\Jair\source\repos\Clase9Nov\MisBibliotecas\bin\Debug\MisBibliotecas.pdb
+C:\Users\Jair\source\repos\Clase9Nov\MisBibliotecas\obj\Debug\MisBibliotecas.csprojAssemblyReference.cache
+C:\Users\Jair\source\repos\Clase9Nov\MisBibliotecas\obj\Debug\MisBibliotecas.csproj.CoreCompileInputs.cache
+C:\Users\Jair\source\repos\Clase9Nov\MisBibliotecas\obj\Debug\MisBibliotecas.dll
+C:\Users\Jair\source\repos\Clase9Nov\MisBibliotecas\obj\Debug\MisBibliotecas.pdb

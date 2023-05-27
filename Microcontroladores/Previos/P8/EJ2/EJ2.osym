@@ -1,0 +1,37 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+CCP_2
+CCP_2_LOW
+CCP_2_HIGH
+PSP_DATA
+
+Project Directory:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ2\
+
+Project Files:
+    EJ2.c                                                   [12-may.-23 12:01  CRC=B3FFA21C]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [21-feb.-20 15:47  CRC=90274745]
+
+Source signature=D44E30A6
+
+Units:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ2\EJ2
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   EJ2.xsym
+    Errors:      ..\EJ1\EJ1.err
+    Ext Symbols: EJ2.esym
+    Object:      EJ2.o
+    Symbols:     EJ2.osym

@@ -1,0 +1,66 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Fri Apr 28 16:38:21 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000002
+                   .org_2       code   0x000005    program   0x0000f0
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000000      
+                            0x000005    0x00007c      
+            121 out of 8454 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    Ciclo   0x000010    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+        Ciclo_antihorario   0x00004d    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+            Ciclo_horario   0x000030    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                   Inicio   0x000005    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                      dos   0x000074    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                       q0   0x000024    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                       q1   0x00002d    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                     q1_1   0x00002a    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                       q2   0x00004a    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                     q2_2   0x000047    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                       q3   0x000067    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                     q3_3   0x000064    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                       q4   0x00006d    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                     q4_4   0x00006a    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                  retardo   0x000070    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                     tres   0x000072    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                      uno   0x000076    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   Inicio   0x000005    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                    Ciclo   0x000010    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                       q0   0x000024    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                     q1_1   0x00002a    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                       q1   0x00002d    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+            Ciclo_horario   0x000030    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                     q2_2   0x000047    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                       q2   0x00004a    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+        Ciclo_antihorario   0x00004d    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                     q3_3   0x000064    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                       q3   0x000067    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                     q4_4   0x00006a    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                       q4   0x00006d    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                  retardo   0x000070    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                     tres   0x000072    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                      dos   0x000074    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+                      uno   0x000076    program     static C:\Users\tobad\Desktop\E2P5LabMicro.asm
+
+

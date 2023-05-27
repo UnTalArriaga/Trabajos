@@ -1,0 +1,101 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     lcdlat
+008     lcd
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     conteo
+021     dato
+022     ante
+023     @PRINTF_D_689.P1
+023     lcd_init.i
+023     @PRINTF_X_689.P1
+024-027 lcd_init.LCD_INIT_STRING
+024     @PRINTF_X_689.P1
+024     @PRINTF_D_689.P2
+025     @PRINTF_D_689.@SCRATCH1
+026     @PRINTF_D_689.@SCRATCH2
+027     @PRINTF_D_689.@SCRATCH3
+028     lcd_init.@SCRATCH1
+028     @PRINTF_D_689.@SCRATCH4
+029     @DIV88.P1
+029     lcd_putc.c
+02A     @delay_ms1.P1
+02A     lcd_gotoxy.x
+02A     @DIV88.P1
+02B     lcd_gotoxy.y
+02B     @DIV88.@SCRATCH1
+02C     lcd_gotoxy.address
+02D     lcd_gotoxy.@SCRATCH1
+02E     lcd_send_byte.address
+02F     lcd_send_byte.n
+030     lcd_read_byte.low
+030     lcd_send_byte.@SCRATCH1
+031     lcd_read_byte.high
+031     lcd_send_nibble.n
+032     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000018  lcd_send_nibble
+000027  lcd_read_nibble
+00002D  lcd_send_byte
+000033  lcd_read_byte
+00006F  lcd_init
+0000AD  lcd_gotoxy
+0000BF  lcd_putc
+0000EB  @DIV88
+000100  @PRINTF_D_689
+000159  @PRINTF_X_689
+00017C  MAIN
+00017C  @cinit1
+000184  @cinit2
+
+Project Directory:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ7\
+
+Project Files:
+    EJ7.c                                                   [12-may.-23 12:09  CRC=99DF4234]
+    C:\Program Files (x86)\PICC\Devices\16F877.h            [21-feb.-20 15:47  CRC=90274745]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-feb.-16 09:05  CRC=D1A6378A]
+
+Source signature=CD52F88D
+Program memory checksum=0000
+Hex file CRC=B833
+
+Units:
+    D:\Escuela\Semestre 23-2\LabMicros\Previos\P8\EJ7\EJ7 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   EJ7.xsym
+    Errors:      EJ7.err
+    Ext Symbols: EJ7.esym
+    INHX8:       EJ7.hex
+    Symbols:     EJ7.sym
+    List:        EJ7.lst
+    Debug/COFF:  EJ7.cof
+    Project:     EJ7.ccspjt
+    Call Tree:   EJ7.tre
+    Statistics:  EJ7.STA

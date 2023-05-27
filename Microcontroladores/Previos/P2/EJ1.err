@@ -1,0 +1,6 @@
+Warning[205] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P2\EJ1.ASM 1 : Found directive in column 1. (PROCESSOR)
+Warning[205] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P2\EJ1.ASM 2 : Found directive in column 1. (INCLUDE)
+Warning[205] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P2\EJ1.ASM 3 : Found directive in column 1. (ORG)
+Warning[203] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P2\EJ1.ASM 4 : Found opcode in column 1. (GOTO)
+Warning[205] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P2\EJ1.ASM 5 : Found directive in column 1. (ORG)
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P2\EJ1.ASM 15 : Using default destination of 1 (file).

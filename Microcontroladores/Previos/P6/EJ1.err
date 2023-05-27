@@ -1,0 +1,15 @@
+Warning[205] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 1 : Found directive in column 1. (processor)
+Warning[215] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 1 : Processor superseded by command line.  Verify processor symbol.
+Message[301] C:\PROGRAM FILES (X86)\MICROCHIP\MPASM SUITE\P16F877A.INC 33 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 3 : Found label after column 1. (valor1)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 4 : Found label after column 1. (valor2)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 5 : Found label after column 1. (valor3)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 6 : Found label after column 1. (cte1)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 7 : Found label after column 1. (cte2)
+Warning[207] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 8 : Found label after column 1. (cte3)
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 16 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 17 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 105 : Using default destination of 1 (file).
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 107 : Using default destination of 1 (file).
+Message[305] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 109 : Using default destination of 1 (file).
+Warning[205] D:\ESCUELA\SEMESTRE 23-2\LABMICROS\PREVIOS\P6\EJ1.ASM 112 : Found directive in column 1. (END)

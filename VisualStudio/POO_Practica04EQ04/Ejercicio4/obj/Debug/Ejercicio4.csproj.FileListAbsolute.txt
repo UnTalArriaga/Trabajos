@@ -1,0 +1,22 @@
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio4\bin\Debug\Ejercicio4.exe.config
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio4\bin\Debug\Ejercicio4.exe
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio4\bin\Debug\Ejercicio4.pdb
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio4\obj\Debug\Ejercicio4.csprojAssemblyReference.cache
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio4\obj\Debug\Ejercicio4.csproj.CoreCompileInputs.cache
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio4\obj\Debug\Ejercicio4.exe
+C:\Users\vaio\Desktop\Practica4\Practica4\Ejercicio4\obj\Debug\Ejercicio4.pdb
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio4\bin\Debug\Ejercicio4.exe.config
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio4\bin\Debug\Ejercicio4.exe
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio4\bin\Debug\Ejercicio4.pdb
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio4\obj\Debug\Ejercicio4.csprojAssemblyReference.cache
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio4\obj\Debug\Ejercicio4.csproj.CoreCompileInputs.cache
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio4\obj\Debug\Ejercicio4.exe
+C:\Users\vaio\Desktop\Tareas\POO\Practica4\Ejercicio4\obj\Debug\Ejercicio4.pdb
+D:\Escuela\Semestre 21-2\POO\POO_Practica04EQ04\Ejercicio4\bin\Debug\Ejercicio4.exe.config
+D:\Escuela\Semestre 21-2\POO\POO_Practica04EQ04\Ejercicio4\bin\Debug\Ejercicio4.exe
+D:\Escuela\Semestre 21-2\POO\POO_Practica04EQ04\Ejercicio4\bin\Debug\Ejercicio4.pdb
+D:\Escuela\Semestre 21-2\POO\POO_Practica04EQ04\Ejercicio4\obj\Debug\Ejercicio4.csproj.AssemblyReference.cache
+D:\Escuela\Semestre 21-2\POO\POO_Practica04EQ04\Ejercicio4\obj\Debug\Ejercicio4.csproj.SuggestedBindingRedirects.cache
+D:\Escuela\Semestre 21-2\POO\POO_Practica04EQ04\Ejercicio4\obj\Debug\Ejercicio4.csproj.CoreCompileInputs.cache
+D:\Escuela\Semestre 21-2\POO\POO_Practica04EQ04\Ejercicio4\obj\Debug\Ejercicio4.exe
+D:\Escuela\Semestre 21-2\POO\POO_Practica04EQ04\Ejercicio4\obj\Debug\Ejercicio4.pdb
