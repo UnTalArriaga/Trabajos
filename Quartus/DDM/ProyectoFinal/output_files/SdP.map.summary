@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Sep 22 19:44:51 2022
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : SdP
+Top-level Entity Name : SdP
+Family : MAX 10
+Total logic elements : 53
+    Total combinational functions : 51
+    Dedicated logic registers : 34
+Total registers : 34
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

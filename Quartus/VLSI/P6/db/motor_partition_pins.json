@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SALIDA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ACTIVO",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "VEL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VEL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VEL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DIR",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

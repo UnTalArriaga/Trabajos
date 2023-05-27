@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "windows64",
+		"os_name" : "Windows 10",
+		"os_version" : "10.0"
+	},
+	"error" : {
+		"executable" : "quartus_map",
+		"comment" : "not_applicable",
+		"error_message" : "!sgate->get_single_oterm()->has_fanout()",
+		"source_file" : "/quartus/synth/ftm/ftm_buffer.cpp",
+		"line" : "1608",
+		"stack_trace" : "\t0x7ffcf369f49a: SYNTH_FTM + 0x6f49a (?process_lcell_and_cut_buffers@FTM_BUFFER@@AEAAHPEAVCDB_SGATE_NETLIST@@@Z + 0x6aa)\n\t0x7ffcf369c6e9: SYNTH_FTM + 0x6c6e9 (?post_lutmap@FTM_BUFFER@@QEAAXPEAVCDB_SGATE_NETLIST@@@Z + 0x79)\n\t0x7ffcf364b485: SYNTH_FTM + 0x1b485 (?post_lutmap@FTM_ROOT_IMPL@@AEAAXXZ + 0xa5)\n\t0x7ffcf36473b7: SYNTH_FTM + 0x173b7 (?start_normal_flow@FTM_ROOT_IMPL@@AEAAPEAVCDB_ATOM_NETLIST@@XZ + 0x717)\n\t0x7ffcf3645f23: SYNTH_FTM + 0x15f23 (?start@FTM_ROOT_IMPL@@QEAAPEAVCDB_ATOM_NETLIST@@XZ + 0xc3)\n\t0x7ffcf3645680: SYNTH_FTM + 0x15680 (?start@FTM_ROOT@@QEAAPEAVCDB_ATOM_NETLIST@@PEAVCDB_SGATE_NETLIST@@PEAVSCL_WYSIWYG_ATOM_FACTORY@@@Z + 0xf0)\n\t0x7ffcf4534825: SYNTH_SCL + 0x54825 (?do_tech_mapping@SCL_SYN_HIER@@QEAAPEAVCDB_ATOM_NETLIST@@PEAVCDB_SGATE_NETLIST@@@Z + 0x145)\n\t0x7ffcf453b704: SYNTH_SCL + 0x5b704 (?synthesize_with_script@SCL_SYN_HIER@@AEAA_NPEAPEAVMLS_NETLIST@@PEAVCDB_SGATE_NETLIST@@AEBW4SCRIPT_TYPE@MLS_SCRIPT_MANAGER@@PEAPEAVCDB_ATOM_NETLIST@@@Z + 0x334)\n\t0x7ffcf453c6cc: SYNTH_SCL + 0x5c6cc (?work_normal_flow@SCL_SYN_HIER@@AEAA_NXZ + 0x64c)\n\t0x7ffcf4503fb1: SYNTH_SCL + 0x23fb1 (?process_one_hierarchy@SCL_SYN_STATE@@AEAA_NPEAVCDB_SGATE_HIERARCHY@@PEAPEAVCDB_ATOM_NETLIST@@@Z + 0xa1)\n\t0x7ffcf4506dc2: SYNTH_SCL + 0x26dc2 (?synthesize_design@SCL_SYN_STATE@@QEAA_NXZ + 0x442)\n\t0x7ffcf4505a0c: SYNTH_SCL + 0x25a0c (?scl_execute_syn@@YA_NPEAVCMP_FACADE@@@Z + 0x9c)\n\t0x7ffcf44e5792: SYNTH_SCL + 0x5792 (?scl_execute_normal_flow@@YA_NPEAVCMP_FACADE@@_N@Z + 0x142)\n\t0x7ff63aa6571d: quartus_map + 0x571d (?qsyn_execute_scl@@YA_NPEAVQSYN_FRAMEWORK@@PEAVIDU_PARTITION@@_N@Z + 0x26d)\n\t0x7ff63aa80bff: quartus_map + 0x20bff (?scl_iteration@QSYN_FRAMEWORK@@AEAA_NXZ + 0xabf)\n\t0x7ff63aa7431a: quartus_map + 0x1431a (?execute_core@QSYN_FRAMEWORK@@AEAA_NPEAVTHR_NAMED_PIPE@@0@Z + 0x20a)\n\t0x7ff63aa73d2b: quartus_map + 0x13d2b (?execute@QSYN_FRAMEWORK@@UEAA_NXZ + 0x49b)\n\t0x7ffd5466150c: comp_qexe + 0x1150c (qexe_do_normal + 0x1ec)\n\t0x7ffd54666622: comp_qexe + 0x16622 (qexe_run + 0x432)\n\t0x7ffd54667371: comp_qexe + 0x17371 (?qexe_standard_main@@YAHPEAVQEXE_FRAMEWORK@@PEAPEBUQEXE_OPTION_DEFINITION@@HPEAPEBD@Z + 0xc1)\n\t0x7ff63aa7b42b: quartus_map + 0x1b42b (?qsyn_main@@YAHHPEAPEBD@Z + 0x53b)\n\t0x7ffd48b533a8: CCL_MSG + 0x133a8 (?msg_main_thread@@YAPEAXPEAX@Z + 0x18)\n\t0x7ffd48b54bae: CCL_MSG + 0x14bae (?msg_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x6e)\n\t0x7ffd48c66af0: ccl_mem + 0x16af0 (?mem_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x70)\n\t0x7ffd48b52c41: CCL_MSG + 0x12c41 (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0xa1)\n\t0x7ff63aa8a236: quartus_map + 0x2a236 (__tmainCRTStartup + 0x10e)\n\t0x7ffd61607033: KERNEL32 + 0x17033 (BaseThreadInitThunk + 0x13)\n\t0x7ffd61742650: ntdll + 0x52650 (RtlUserThreadStart + 0x20)\n",
+		"subsystem" : "FTM"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "19.1.0",
+		"build" : "670",
+		"edition" : "Lite Edition"
+	}
+}

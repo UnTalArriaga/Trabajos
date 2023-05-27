@@ -1,0 +1,9 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+entity ASM is 
+	port (reloj: in std_logic;
+			A: in std_logic;
+			L: in std_logic_vector (2 downto 0););
+end ASM;

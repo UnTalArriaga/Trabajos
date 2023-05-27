@@ -1,0 +1,68 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity proyectoRecorrido is
+port (
+	clk_50Mhz:in std_logic;
+	s0,s1,s2,s3,s4,s5: out std_logic_vector(0 to 6)
+	);
+end proyectoRecorrido;
+
+architecture rtl of proyectoRecorrido is 
+	constant max: integer:=50000000;
+	constant half: integer:= max/2;
+	signal i:integer range 0 to max;
+	signal p1,p2,p3,p4,p5,p6: std_logic_vector(0 to 6):= "1111111";
+begin
+
+--definimos el divisor de frecuencia 
+	process (clk_50Mhz)
+		begin
+			if(clk_50Mhz 'event and clk_50Mhz='1') then 
+				if(i < max) then i <= i + 1;
+				else i <= 1;
+				end if;
+				if(i <= half) then clk0 <='0';
+				else clk0 <= '1';
+				end if;
+			end if;
+	end process;
+
+	process(clk0)
+		variable cuenta: integer range 0 to 18;
+		variable salida: std_logic_vector(0 to 6):= "1111111";
+	begin
+	--definiendo el contador 
+		if(clk0 'event and clk0 = '1') then 
+			cuenta:= cuenta + 1;
+		end if;
+	--definiendo el mensaje 
+	case cuenta is
+		when 0 => salida:= "0011000": --P
+		when 0 => salida:= "1111000": --R
+		when 0 => salida:= "0000001": --O
+		when 0 => salida:= "0111000": --F
+		when 0 => salida:= "0110000": --E
+		when others => salida:= "1111111";
+	end case;
+
+	--definiendo la salida 
+	if rising_edge(clk0) then 
+		s0 <= salida;
+		p1 <= salida;
+		s1 <= p1;
+ 		p2 <= p1;
+		s2 <= p2;
+		p3 <= p2;
+		s3 <= p3;
+		p4 <= p3;
+		s4 <= p4;
+		p5 <= p4;
+		s5 <= p5;
+	end if;
+
+	if (cuenta>18)  then cuenta:= 0;
+	end if;
+
+end process;
+end rtl;

@@ -1,0 +1,144 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Escuela/Semestre 22-1/LDDM/Practicas/Practica 2/2.1/simulation/qsim
+Econtrolentrada
+Z1 w1662006202
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 hIbO9BBYYWGW_8lVV<F893
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 [A0e0UP4j3EDHZ:h0KOS^3
+R0
+Z8 8Practica2.vho
+Z9 FPractica2.vho
+l0
+L89
+V<cGdAeh3H:mP7JMKNmZmV2
+!s100 T1zU2MiFNDR37b4gJn]3A2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1662006204
+!i10b 1
+Z12 !s108 1662006204.000000
+Z13 !s90 -work|work|Practica2.vho|
+Z14 !s107 Practica2.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 14 controlentrada 0 22 <cGdAeh3H:mP7JMKNmZmV2
+l139
+L105
+V]G5`5@Y>>YJl?T7M12?L13
+!s100 j_Od^ef@3WlYD0XQ`gQH40
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Econtrolentrada_vhd_vec_tst
+Z17 w1662006201
+R5
+R6
+R0
+Z18 8Waveform1.vwf.vht
+Z19 FWaveform1.vwf.vht
+l0
+L32
+V<1OK^`VR7;beToTiefKa^0
+!s100 Ng=HSIU2CT;0a@^cE7heL3
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform1.vwf.vht|
+Z21 !s107 Waveform1.vwf.vht|
+!i113 1
+R15
+R16
+Acontrolentrada_arch
+R5
+R6
+Z22 DEx4 work 26 controlentrada_vhd_vec_tst 0 22 <1OK^`VR7;beToTiefKa^0
+l45
+L34
+VoF0QT:l;jcJ0GzQ3oK7?g0
+!s100 Dgg>JaB_Pm051h?E9DIlk3
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16
+Ehard_block
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+R8
+R9
+l0
+L35
+Vhj[i;a0dD85B`o1JPT^cg2
+!s100 3A]XnMhF<;9mKUe5mn3aM1
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 hj[i;a0dD85B`o1JPT^cg2
+l76
+L54
+Va5ClDYec`9chO`Ne0M1NL2
+!s100 >:Wi^nX[YiN=@>>JC6K_83
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16

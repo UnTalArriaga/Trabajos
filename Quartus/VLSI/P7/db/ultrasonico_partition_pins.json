@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SENSOR_DISP",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTOS2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "SENSOR_ECO",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

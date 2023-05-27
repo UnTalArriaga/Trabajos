@@ -1,0 +1,100 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity practica8 is
+	port (clk: in std_logic;
+			reset: in std_logic;
+			led_o: out std_logic;
+			sw: in std_logic_vector(3 downto 0);
+			tx: out std_logic);
+end entity tx_m;
+
+architecture behavioral of practica8 is  --señales auxiliares 
+	
+	signal clk_div: std_logic;
+	signal clk_counter: integer range 0 to 2604;
+	signal tx_bit: integer range 0 to 7;
+	type tx_state_t is (IDLE, START, DATA, STOP);
+	signal tx_state: tx_state_t;
+	signal char_tx: std_logic_vector(7 downto 0);
+	signal char_pointer: integer range 0 to 10;
+	signal sw_count: integer:= 0;
+	
+begin 
+
+	mensaje: process(char_pointer) begin --memoria para almacenar el mensaje
+		case(char_pointer) is 
+			when 0 =>
+				char_tx <= "01000010"; 
+			when 1 =>
+				char_tx <= "01001001"; 
+			when 2 =>
+				char_tx <= "01001110"; 
+			when 3 =>
+				char_tx <= "00111010"; 
+			when 4 =>
+				char_tx <= "00100000"; 
+			when 5 =>
+				char_tx <= "00110000"; 
+			when 6 =>
+				char_tx <= "00110001";
+			when others =>
+				char_tx <= (others => '0');
+		end case;
+	end process;
+
+	tx_divisor: process(clk,reset) --divisor de reloj de 50Mhz a 9600bps
+		begin 
+		if(reset='0') then 
+			clk_div <= '0';
+		elsif(rising_edge(clk)) then 
+			if(clk_counter = 2604) then 
+				clk_div <= not(clk_div);
+				clk_counter <= 0;
+			else
+				clk_counter <= clk_counter +1;
+			end if;
+		end if;
+	end process;
+	
+	lee_y_envia:process(clk_div, reset)
+		begin
+			if(reset = '0') then 
+				tx <= '1';
+				tx_state <= IDLE;
+				tx_bit <= 0;
+				led_o <= '0';
+				char_pointer <= 0;
+				sw_count <= 0;
+			elsif(rising_edge(clk_div)) then 
+				case(tx_state) is 
+				when START =>
+					tx <= '0';
+					tx_state <= DATA;
+				when DATA =>
+					tx <= char_tx(tx_bit);
+					if(tx_bit = 7) then 
+						tx_state <= STOP;
+					else 
+						tx_bit <= tx_bit + 1;
+					end if;
+				when STOP =>
+					tx_state <= IDLE;
+					char_pointer <= char_pointer + 1;
+					if sw_count < 4 and char_pointer > 4 then 
+						if sw(sw_count) = '0' then 
+							char_pointer <= 5;
+							sw_count <= sw_count + 1;
+						else
+							char_pointer <= 6;
+							sw_count <= sw_count + 1;
+						end if;
+					elsif sw_count > 4 then 
+						char_pointer <= 10;
+					end if;
+				end case;
+			end if;
+	end process;
+end architecture behavioral;
+		

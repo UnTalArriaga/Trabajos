@@ -1,0 +1,8 @@
+
+State Machine - |ASM|Ep
+Name Ep.s4 Ep.s3 Ep.s2 Ep.s1 Ep.s0 
+Ep.s0 0 0 0 0 0 
+Ep.s1 0 0 0 1 1 
+Ep.s2 0 0 1 0 1 
+Ep.s3 0 1 0 0 1 
+Ep.s4 1 0 0 0 1 
