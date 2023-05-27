@@ -1,0 +1,308 @@
+# 3ds Max Wavefront OBJ Exporter v0.99 - (c)2007 guruware
+# File Created: 15.12.2022 18:45:10
+
+newmtl mf__saltwater_aquarium_stone
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_stone_diff.png
+	map_Kd maps\12987_saltwater_aquarium_stone_diff.png
+
+newmtl mf_phong2SG42
+	Ns 18.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\patas.png
+	map_Kd maps\patas.png
+
+newmtl mf_phong3SG
+	Ns 18.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\iglo.png
+	map_Kd maps\iglo.png
+
+newmtl mf__saltwater_aquarium_rock_9
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_rock_6_diff.png
+	map_Kd maps\12987_saltwater_aquarium_rock_6_diff.png
+
+newmtl mf_phong3SG2
+	Ns 18.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\iglo.png
+	map_Kd maps\iglo.png
+
+newmtl mf_phong2SG40
+	Ns 18.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\nieve.png
+	map_Kd maps\nieve.png
+
+newmtl mf__saltwater_aquarium_rock_3
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_rock_2_diff.png
+	map_Kd maps\12987_saltwater_aquarium_rock_2_diff.png
+
+newmtl mf__saltwater_aquarium_sand1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_sand_diff.png
+	map_Kd maps\12987_saltwater_aquarium_sand_diff.png
+
+newmtl maqueta2__saltwater_aquarium_stone
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_stone_diff.png
+	map_Kd maps\12987_saltwater_aquarium_stone_diff.png
+
+newmtl maqueta2__saltwater_aquarium_rock_1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_rock_1_diff.png
+	map_Kd maps\12987_saltwater_aquarium_rock_1_diff.png
+
+newmtl maqueta2__saltwater_aquarium_sand1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_sand_diff.png
+	map_Kd maps\12987_saltwater_aquarium_sand_diff.png
+
+newmtl maqueta2__saltwater_aquarium_rock_3
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_rock_2_diff.png
+	map_Kd maps\12987_saltwater_aquarium_rock_2_diff.png
+
+newmtl maqueta2__saltwater_aquarium_rock_5
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_rock_4_diff.png
+	map_Kd maps\12987_saltwater_aquarium_rock_4_diff.png
+
+newmtl maqueta2__saltwater_aquarium_rock_14
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_rock_3_diff.png
+	map_Kd maps\12987_saltwater_aquarium_rock_3_diff.png
+
+newmtl maqueta2__saltwater_aquarium_rock_9
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_rock_6_diff.png
+	map_Kd maps\12987_saltwater_aquarium_rock_6_diff.png
+
+newmtl maqueta2__saltwater_aquarium_rock_11
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_rock_7_diff.png
+	map_Kd maps\12987_saltwater_aquarium_rock_7_diff.png
+
+newmtl maqueta2__saltwater_aquarium_rock_7
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\12987_saltwater_aquarium_rock_5_diff.png
+	map_Kd maps\12987_saltwater_aquarium_rock_5_diff.png
+
+newmtl wire_134006006
+	Ns 32
+	d 1
+	Tr 0
+	Tf 1 1 1
+	illum 2
+	Ka 0.5255 0.0235 0.0235
+	Kd 0.5255 0.0235 0.0235
+	Ks 0.3500 0.3500 0.3500
+	map_Ka maps\slat39XL.png
+	map_Kd maps\slat39XL.png
+
+newmtl snake_phong5SG
+	Ns 18.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\CaveRockPack1_Light_Diffuse.png
+	map_Kd maps\CaveRockPack1_Light_Diffuse.png
+
+newmtl snake_phong6SG
+	Ns 18.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\slat39XL.png
+	map_Kd maps\slat39XL.png
+
+newmtl snake_phong2SG
+	Ns 18.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\slat39XL.png
+	map_Kd maps\slat39XL.png
+
+newmtl snake_phong11SG
+	Ns 18.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\1.png
+	map_Kd maps\1.png

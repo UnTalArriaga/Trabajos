@@ -1,0 +1,4 @@
+Recordar que cada .c de cada práctica esta en LCG_Arriaga\LCG_Arriaga 
+Para verlo hay que agregar elemento existente en el proyecto y eliminar el otro .c que haya. 
+De la practica 7 hay que descomentar lineas de código (En final.c)
+
